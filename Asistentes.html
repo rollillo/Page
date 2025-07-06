@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asistentes de IA | KI-LABOR</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Mantenemos los mismos estilos de la página principal */
+        :root {
+            --navy-blue: #001a33;
+            --dark-navy: #000d1a;
+            --light-blue: #003366;
+            --orange: #4876dab0;
+            --white: #ffffff;
+            --light-white: rgba(255,255,255,0.9);
+            --dark-gray: #e6e6e6;
+            --light-gray: #1a1a1a;
+            --section-bg: #0a0a0a;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Raleway', sans-serif;
+            color: var(--dark-gray);
+            line-height: 1.7;
+            background-color: var(--section-bg);
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            letter-spacing: -0.5px;
+            color: var(--white);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        /* Header */
+        header {
+            background-color: rgba(0, 10, 26, 0.9);
+            color: var(--white);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            height: 45px;
+            margin-right: 15px;
+            filter: drop-shadow(0 0 5px rgba(0, 102, 204, 0.5));
+        }
+        
+        .logo-text h1 {
+            font-size: 1.8rem;
+            margin-bottom: 0.2rem;
+            background: linear-gradient(to right, var(--white), var(--orange));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Hero Section */
+        .service-hero {
+            background: linear-gradient(rgba(0, 10, 26, 0.85), rgba(0, 10, 26, 0.9)), url('https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            padding-top: 80px;
+        }
+        
+        .service-hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .service-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+        
+        .service-hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        /* Content Sections */
+        .service-section {
+            padding: 5rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 4px;
+            background: var(--orange);
+            bottom: -15px;
+            left: 25%;
+            border-radius: 2px;
+        }
+        
+        .section-title p {
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.2rem;
+            opacity: 0.8;
+        }
+        
+        /* How It Works */
+        .steps-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .step-card {
+            background: rgba(10, 20, 40, 0.9);
+            border-radius: 15px;
+            padding: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .step-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .step-number {
+            display: inline-block;
+            background: var(--orange);
+            color: var(--white);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        
+        /* Tools Section */
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .tool-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .tool-card:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-5px);
+        }
+        
+        .tool-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--orange);
+        }
+        
+        /* Use Cases */
+        .use-cases {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .use-case {
+            background: rgba(0, 51, 102, 0.2);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .use-case img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .use-case-content {
+            padding: 1.5rem;
+        }
+        
+        .use-case h3 {
+            margin-bottom: 0.5rem;
+            color: var(--orange);
+        }
+        
+        /* Demo Section */
+        .demo-container {
+            background: rgba(0, 26, 51, 0.5);
+            border-radius: 15px;
+            padding: 3rem;
+            margin-top: 3rem;
+            text-align: center;
+            border: 1px solid rgba(4, 0, 255, 0.2);
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            text-align: center;
+            padding: 4rem 0;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--orange);
+            color: var(--white);
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.4s ease;
+            margin: 1rem;
+        }
+        
+        .btn:hover {
+            background: #453c99;
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(47, 31, 119, 0.4);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--orange);
+            color: var(--orange);
+        }
+        
+        .btn-outline:hover {
+            background: var(--orange);
+            color: var(--white);
+        }
+        
+        /* Footer */
+        footer {
+            background: #000;
+            color: var(--white);
+            text-align: center;
+            padding: 3rem 0;
+        }
+        
+        .footer-logo {
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(to right, var(--white), var(--orange));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            display: inline-block;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-links a {
+            color: var(--dark-gray);
+            margin: 0 1.5rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+        
+        .footer-links a:hover {
+            color: var(--orange);
+        }
+        
+        .copyright {
+            opacity: 0.6;
+            font-size: 0.9rem;
+            margin-top: 2rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .service-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .service-hero p {
+                font-size: 1.1rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="Logo_1.png" alt="KI-LABOR Logo">
+                    <div class="logo-text">
+                        <h1>KI-LABOR</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="service-hero">
+        <div class="service-hero-content">
+            <h1>Asistente Virtual con IA</h1>
+            <p>Transforma la forma en que interactúas con tus datos mediante asistentes que comprenden lenguaje natural</p>
+        </div>
+    </section>
+    
+    <!-- How It Works Section -->
+    <section class="service-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>¿Cómo Funciona?</h2>
+                <p>Nuestros asistentes de IA interpretan tus preguntas en lenguaje natural y las convierten en acciones concretas</p>
+            </div>
+            
+            <div class="steps-container">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3>Interpretación Natural</h3>
+                    <p>El usuario formula preguntas en lenguaje cotidiano como "¿Cuáles fueron las ventas del último trimestre por región?"</p>
+                    <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1064&q=80" alt="Lenguaje natural" style="width:100%; border-radius:8px; margin-top:1rem;">
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3>Generación de Consultas</h3>
+                    <p>La IA analiza la intención y estructura la consulta SQL correspondiente para extraer los datos solicitados</p>
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Código SQL" style="width:100%; border-radius:8px; margin-top:1rem;">
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3>Visualización Automática</h3>
+                    <p>Los resultados se presentan en gráficos interactivos y tablas resumen, listos para el análisis</p>
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1115&q=80" alt="Visualización de datos" style="width:100%; border-radius:8px; margin-top:1rem;">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Tools Section -->
+    <section class="service-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Tecnologías que Utilizamos</h2>
+                <p>Combinamos las mejores herramientas de inteligencia artificial y procesamiento de lenguaje natural</p>
+            </div>
+            
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <div class="tool-icon"><i class="fab fa-python"></i></div>
+                    <h3>Python</h3>
+                    <p>Lenguaje principal para el desarrollo de nuestros modelos de IA</p>
+                </div>
+                
+                <div class="tool-card">
+                    <div class="tool-icon"><i class="fas fa-brain"></i></div>
+                    <h3>TensorFlow</h3>
+                    <p>Framework para el entrenamiento de modelos de aprendizaje profundo</p>
+                </div>
+                
+                <div class="tool-card">
+                    <div class="tool-icon"><i class="fas fa-language"></i></div>
+                    <h3>NLTK</h3>
+                    <p>Procesamiento de lenguaje natural para entender las consultas</p>
+                </div>
+                
+                <div class="tool-card">
+                    <div class="tool-icon"><i class="fas fa-database"></i></div>
+                    <h3>SQL</h3>
+                    <p>Generación automática de consultas a bases de datos</p>
+                </div>
+                
+                <div class="tool-card">
+                    <div class="tool-icon"><i class="fas fa-chart-bar"></i></div>
+                    <h3>Plotly</h3>
+                    <p>Visualización interactiva de los resultados</p>
+                </div>
+                
+                <div class="tool-card">
+                    <div class="tool-icon"><i class="fas fa-cloud"></i></div>
+                    <h3>Azure AI</h3>
+                    <p>Infraestructura en la nube para despliegue escalable</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Use Cases Section -->
+    <section class="service-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Aplicaciones Prácticas</h2>
+                <p>Descubre cómo nuestros asistentes de IA pueden transformar tu negocio</p>
+            </div>
+            
+            <div class="use-cases">
+                <div class="use-case">
+                    <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Business Intelligence">
+                    <div class="use-case-content">
+                        <h3>Business Intelligence</h3>
+                        <p>Consulta tus métricas empresariales con preguntas simples sin necesidad de conocimientos técnicos</p>
+                    </div>
+                </div>
+                
+                <div class="use-case">
+                    <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Ventas y Marketing">
+                    <div class="use-case-content">
+                        <h3>Ventas y Marketing</h3>
+                        <p>Analiza tendencias de ventas, comportamiento del cliente y eficacia de campañas</p>
+                    </div>
+                </div>
+                
+                <div class="use-case">
+                    <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" alt="Recursos Humanos">
+                    <div class="use-case-content">
+                        <h3>Recursos Humanos</h3>
+                        <p>Obtén insights sobre rendimiento, rotación y satisfacción de empleados</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Demo Section -->
+    <section class="service-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Demostración Interactiva</h2>
+                <p>Prueba cómo funciona nuestro asistente de IA con datos de ejemplo</p>
+            </div>
+            
+            <div class="demo-container">
+                <h3>Pregúntale a nuestro asistente</h3>
+                <p>Ejemplo: "Muestra las ventas por producto del último mes ordenadas de mayor a menor"</p>
+                <div style="background: rgba(0,0,0,0.3); padding: 1rem; border-radius: 8px; margin: 2rem 0; min-height: 200px;">
+                    <!-- Aquí iría el componente interactivo real -->
+                    <p style="color: var(--orange); font-style: italic;">[Área de demostración interactiva]</p>
+                </div>
+                <a href="#" class="btn">Probar Demo Completa</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>¿Listo para transformar cómo interactúas con tus datos?</h2>
+            <p>Implementamos soluciones personalizadas según las necesidades específicas de tu empresa</p>
+            <div style="margin-top: 2rem;">
+                <a href="/contacto" class="btn">Solicitar una Demostración</a>
+                <a href="https://rollillo.github.io/Page/#contact" class="btn btn-outline">Volver al Inicio</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-logo">KI-LABOR</div>
+            <div class="footer-links">
+                <a href="/">Inicio</a>
+                <a href="/servicios">Servicios</a>
+                <a href="/nosotros">Nosotros</a>
+                <a href="/portafolio">Portafolio</a>
+                <a href="/contacto">Contacto</a>
+            </div>
+            <div class="copyright">
+                &copy; 2023 KI-LABOR. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
