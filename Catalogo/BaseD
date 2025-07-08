@@ -3,16 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agentes Inteligentes | KI-LABOR</title>
+    <title>Bases de Datos Empresariales | KI-LABOR</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        /* Estilos base consistentes con la página principal */
         :root {
             --navy-blue: #001a33;
             --dark-navy: #000d1a;
             --light-blue: #003366;
-            --orange: #FF6B00;
+            --teal: #008080;
             --white: #ffffff;
             --light-white: rgba(255,255,255,0.9);
             --dark-gray: #e6e6e6;
@@ -80,7 +79,7 @@
         .logo-text h1 {
             font-size: 1.8rem;
             margin-bottom: 0.2rem;
-            background: linear-gradient(to right, var(--white), var(--orange));
+            background: linear-gradient(to right, var(--white), var(--teal));
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
@@ -89,7 +88,7 @@
         
         /* Hero Section */
         .service-hero {
-            background: linear-gradient(rgba(0, 10, 26, 0.85), rgba(0, 10, 26, 0.9)), url('https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+            background: linear-gradient(rgba(0, 10, 26, 0.85), rgba(0, 10, 26, 0.9)), url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
             height: 60vh;
             display: flex;
             align-items: center;
@@ -151,7 +150,7 @@
             position: absolute;
             width: 50%;
             height: 4px;
-            background: var(--orange);
+            background: var(--teal);
             bottom: -15px;
             left: 25%;
             border-radius: 2px;
@@ -164,39 +163,10 @@
             opacity: 0.8;
         }
         
-        /* Architecture Section */
-        .architecture-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-        
-        .architecture-card {
-            background: rgba(10, 20, 40, 0.6);
-            border-radius: 15px;
-            padding: 2rem;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            transition: all 0.3s ease;
-            text-align: center;
-        }
-        
-        .architecture-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-            border-color: rgba(255, 107, 0, 0.3);
-        }
-        
-        .architecture-icon {
-            font-size: 3rem;
-            color: var(--orange);
-            margin-bottom: 1.5rem;
-        }
-        
-        /* Simulation Features */
+        /* Features Section */
         .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
             margin-top: 3rem;
         }
@@ -204,12 +174,18 @@
         .feature-card {
             background: rgba(0, 26, 51, 0.4);
             border-radius: 10px;
-            padding: 1.5rem;
-            border-left: 4px solid var(--orange);
+            padding: 2rem;
+            border-left: 4px solid var(--teal);
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 128, 128, 0.2);
         }
         
         .feature-card h3 {
-            color: var(--orange);
+            color: var(--teal);
             margin-bottom: 1rem;
             display: flex;
             align-items: center;
@@ -228,16 +204,17 @@
         }
         
         .use-case {
-            background: rgba(0, 51, 102, 0.2);
+            background: rgba(0, 80, 80, 0.2);
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
             transition: all 0.3s ease;
+            border: 1px solid rgba(0, 128, 128, 0.3);
         }
         
         .use-case:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 10px 25px rgba(0, 128, 128, 0.3);
         }
         
         .use-case img {
@@ -252,36 +229,7 @@
         
         .use-case h3 {
             margin-bottom: 0.5rem;
-            color: var(--orange);
-        }
-        
-        /* Demo Section */
-        .demo-container {
-            background: rgba(0, 26, 51, 0.5);
-            border-radius: 15px;
-            padding: 3rem;
-            margin-top: 3rem;
-            text-align: center;
-            border: 1px solid rgba(255, 107, 0, 0.2);
-        }
-        
-        .demo-visualization {
-            background: rgba(0, 0, 0, 0.3);
-            padding: 2rem;
-            border-radius: 10px;
-            margin: 2rem 0;
-            min-height: 300px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-        }
-        
-        .demo-visualization img {
-            max-width: 100%;
-            border-radius: 8px;
-            margin-bottom: 1rem;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            color: var(--teal);
         }
         
         /* CTA Section */
@@ -292,7 +240,7 @@
         
         .btn {
             display: inline-block;
-            background: var(--orange);
+            background: var(--teal);
             color: var(--white);
             padding: 1rem 2.5rem;
             border: none;
@@ -305,19 +253,19 @@
         }
         
         .btn:hover {
-            background: #e05a00;
+            background: #006666;
             transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(255, 107, 0, 0.4);
+            box-shadow: 0 15px 30px rgba(0, 128, 128, 0.4);
         }
         
         .btn-outline {
             background: transparent;
-            border: 2px solid var(--orange);
-            color: var(--orange);
+            border: 2px solid var(--teal);
+            color: var(--teal);
         }
         
         .btn-outline:hover {
-            background: var(--orange);
+            background: var(--teal);
             color: var(--white);
         }
         
@@ -333,7 +281,7 @@
             font-size: 2.5rem;
             font-weight: 900;
             margin-bottom: 1.5rem;
-            background: linear-gradient(to right, var(--white), var(--orange));
+            background: linear-gradient(to right, var(--white), var(--teal));
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
@@ -356,7 +304,7 @@
         }
         
         .footer-links a:hover {
-            color: var(--orange);
+            color: var(--teal);
         }
         
         .copyright {
@@ -387,7 +335,7 @@
         <div class="container">
             <div class="navbar">
                 <div class="logo">
-                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBmaWxsPSIjRkZBNTAwIiBkPSJNMjU2IDhDMTE5IDggOCAxMTkgOCAyNTZzMTExIDI0OCAyNDggMjQ4IDI0OC0xMTEgMjQ4LTI0OFMzOTMgOCAyNTYgOHptMCA0NDhjLTExMC41IDAtMjAwLTg5LjUtMjAwLTIwMFMxNDUuNSA1NiAyNTYgNTZzMjAwIDg5LjUgMjAwIDIwMC04OS41IDIwMC0yMDAgMjAwWm0xMDEuOC0yNjEuN2wtODQuOS02MS43Yy0zLjEtMi40LTcuNS0yLjgtMTEuMS0uN0MtMjU3IDk1LjMgMjU3IDk2IDI1NyA5NnYxNjBjMCAzLjMgMi43IDYgNiA2czYtMi43IDYtNlYxODQuNWw4NC45IDYxLjdjMi43IDIgNi41IDEuNiA4LjktMS4xIDIuNS0yLjcgMi02LjYtLjktOC45WiIvPjwvc3ZnPg==" alt="KI-LABOR Logo">
+                    <img src="Logo_1.png" alt="KI-LABOR Logo">
                     <div class="logo-text">
                         <h1>KI-LABOR</h1>
                     </div>
@@ -399,47 +347,8 @@
     <!-- Hero Section -->
     <section class="service-hero">
         <div class="service-hero-content">
-            <h1>Agentes Inteligentes</h1>
-            <p>Simulador de arquitecturas Human-AI para analizar y optimizar la interacción entre humanos y sistemas inteligentes</p>
-        </div>
-    </section>
-    
-    <!-- Architecture Section -->
-    <section class="service-section">
-        <div class="container">
-            <div class="section-title">
-                <h2>Arquitecturas Human-AI</h2>
-                <p>Modelamos y simulamos diferentes enfoques de colaboración entre humanos y agentes artificiales</p>
-            </div>
-            
-            <div class="architecture-container">
-                <div class="architecture-card">
-                    <div class="architecture-icon">
-                        <i class="fas fa-user-shield"></i>
-                    </div>
-                    <h3>Supervisión Humana</h3>
-                    <p>Arquitectura donde agentes AI realizan tareas bajo supervisión y validación humana constante</p>
-                    <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Supervisión humana" style="width:100%; border-radius:8px; margin-top:1.5rem;">
-                </div>
-                
-                <div class="architecture-card">
-                    <div class="architecture-icon">
-                        <i class="fas fa-robot"></i>
-                    </div>
-                    <h3>Autonomía Controlada</h3>
-                    <p>Agentes toman decisiones autónomas en dominios específicos con intervención humana ocasional</p>
-                    <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Autonomía controlada" style="width:100%; border-radius:8px; margin-top:1.5rem;">
-                </div>
-                
-                <div class="architecture-card">
-                    <div class="architecture-icon">
-                        <i class="fas fa-people-arrows"></i>
-                    </div>
-                    <h3>Colaboración Simétrica</h3>
-                    <p>Interacción fluida donde humanos y AI complementan mutuamente sus capacidades</p>
-                    <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Colaboración simétrica" style="width:100%; border-radius:8px; margin-top:1.5rem;">
-                </div>
-            </div>
+            <h1>Bases de Datos Empresariales</h1>
+            <p>Diseñamos sistemas de gestión de datos robustos, seguros y escalables para optimizar tus operaciones y análisis empresarial</p>
         </div>
     </section>
     
@@ -447,39 +356,39 @@
     <section class="service-section">
         <div class="container">
             <div class="section-title">
-                <h2>Capacidades del Simulador</h2>
-                <p>Herramientas avanzadas para analizar la interacción humano-AI</p>
+                <h2>Nuestras Soluciones</h2>
+                <p>Tecnologías avanzadas para la gestión y análisis de datos empresariales</p>
             </div>
             
             <div class="features-grid">
                 <div class="feature-card">
-                    <h3><i class="fas fa-project-diagram"></i> Modelado de Flujos</h3>
-                    <p>Visualiza y diseña flujos de trabajo entre humanos y agentes AI con herramientas de arrastrar y soltar</p>
+                    <h3><i class="fas fa-database"></i> Bases de Datos Relacionales</h3>
+                    <p>Sistemas SQL optimizados para transacciones complejas y relaciones de datos estructurados</p>
                 </div>
                 
                 <div class="feature-card">
-                    <h3><i class="fas fa-chart-line"></i> Análisis de Rendimiento</h3>
-                    <p>Métricas cuantitativas de eficiencia, precisión y tiempos de respuesta para cada arquitectura</p>
+                    <h3><i class="fas fa-project-diagram"></i> Bases NoSQL</h3>
+                    <p>Soluciones flexibles para datos no estructurados o semiestructurados con alto rendimiento</p>
                 </div>
                 
                 <div class="feature-card">
-                    <h3><i class="fas fa-brain"></i> Simulación Cognitiva</h3>
-                    <p>Modela diferentes niveles de capacidad cognitiva para los agentes artificiales</p>
+                    <h3><i class="fas fa-cloud"></i> Almacenamiento en la Nube</h3>
+                    <p>Implementaciones escalables en entornos cloud con alta disponibilidad y redundancia</p>
                 </div>
                 
                 <div class="feature-card">
-                    <h3><i class="fas fa-user-cog"></i> Adaptación Conductual</h3>
-                    <p>Los agentes aprenden y se adaptan a los patrones de interacción humana</p>
+                    <h3><i class="fas fa-shield-alt"></i> Seguridad de Datos</h3>
+                    <p>Protección avanzada con cifrado, control de acceso y auditoría de actividades</p>
                 </div>
                 
                 <div class="feature-card">
-                    <h3><i class="fas fa-shield-alt"></i> Evaluación de Riesgos</h3>
-                    <p>Identifica puntos críticos y posibles fallos en los flujos de colaboración</p>
+                    <h3><i class="fas fa-sync-alt"></i> Replicación y Backup</h3>
+                    <p>Sistemas de respaldo automático y replicación para máxima continuidad del negocio</p>
                 </div>
                 
                 <div class="feature-card">
-                    <h3><i class="fas fa-database"></i> Banco de Escenarios</h3>
-                    <p>Biblioteca de casos de uso preconfigurados para diferentes industrias</p>
+                    <h3><i class="fas fa-chart-line"></i> Data Warehousing</h3>
+                    <p>Almacenes de datos optimizados para análisis empresarial y business intelligence</p>
                 </div>
             </div>
         </div>
@@ -489,62 +398,57 @@
     <section class="service-section">
         <div class="container">
             <div class="section-title">
-                <h2>Casos de Uso</h2>
-                <p>Aplicaciones prácticas de nuestra tecnología de agentes inteligentes</p>
+                <h2>Áreas de Aplicación</h2>
+                <p>Ejemplos de implementación en diversos sectores empresariales</p>
             </div>
             
             <div class="use-cases">
                 <div class="use-case">
-                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Centros de contacto">
+                    <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1511&q=80" alt="Sistemas ERP">
                     <div class="use-case-content">
-                        <h3>Centros de Contacto</h3>
-                        <p>Optimiza la distribución de llamadas entre agentes humanos y virtuales basado en complejidad</p>
+                        <h3>Sistemas ERP</h3>
+                        <p>Bases de datos integradas para gestión de inventario, finanzas, recursos humanos y cadena de suministro</p>
                     </div>
                 </div>
                 
                 <div class="use-case">
-                    <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" alt="Diagnóstico médico">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="CRM">
                     <div class="use-case-content">
-                        <h3>Diagnóstico Médico</h3>
-                        <p>Asistencia a médicos con sistemas de recomendación y análisis de imágenes médicas</p>
+                        <h3>Sistemas CRM</h3>
+                        <p>Plataformas centralizadas para gestión de relaciones con clientes y análisis de comportamiento</p>
                     </div>
                 </div>
                 
                 <div class="use-case">
-                    <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Operaciones industriales">
+                    <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" alt="Salud">
                     <div class="use-case-content">
-                        <h3>Operaciones Industriales</h3>
-                        <p>Coordinación entre operarios humanos y sistemas autónomos en entornos complejos</p>
+                        <h3>Historiales Médicos</h3>
+                        <p>Sistemas seguros y compatibles con HIPAA para gestión de registros de pacientes y datos clínicos</p>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Demo Section -->
-    <section class="service-section">
-        <div class="container">
-            <div class="section-title">
-                <h2>Demostración Interactiva</h2>
-                <p>Explora nuestro simulador de arquitecturas Human-AI</p>
-            </div>
-            
-            <div class="demo-container">
-                <h3>Simulador de Flujos de Trabajo</h3>
-                <p>Configura diferentes modelos de interacción y observa los resultados en tiempo real</p>
                 
-                <div class="demo-visualization">
-                    <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Interfaz del simulador" style="max-height: 300px;">
-                    <p style="font-style: italic; color: var(--orange);">[Área interactiva del simulador de arquitecturas]</p>
+                <div class="use-case">
+                    <img src="https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1455&q=80" alt="Finanzas">
+                    <div class="use-case-content">
+                        <h3>Sector Financiero</h3>
+                        <p>Bases de datos transaccionales de alta velocidad para operaciones bancarias y mercados</p>
+                    </div>
                 </div>
                 
-                <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
-                    <a href="#" class="btn">
-                        <i class="fas fa-play"></i> Iniciar Simulación
-                    </a>
-                    <a href="#" class="btn btn-outline">
-                        <i class="fas fa-book"></i> Ver Tutorial
-                    </a>
+                <div class="use-case">
+                    <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Logística">
+                    <div class="use-case-content">
+                        <h3>Gestión Logística</h3>
+                        <p>Sistemas en tiempo real para seguimiento de flotas, inventarios y cadena de suministro</p>
+                    </div>
+                </div>
+                
+                <div class="use-case">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="E-commerce">
+                    <div class="use-case-content">
+                        <h3>Plataformas E-commerce</h3>
+                        <p>Bases de datos escalables para catálogos de productos, transacciones y perfiles de usuarios</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -553,13 +457,13 @@
     <!-- CTA Section -->
     <section class="cta-section">
         <div class="container">
-            <h2>¿Listo para optimizar la colaboración en tu organización?</h2>
-            <p>Nuestros agentes inteligentes pueden transformar tus procesos operativos</p>
+            <h2>¿Necesitas una solución de bases de datos a medida?</h2>
+            <p>Optimiza la gestión de tu información con nuestros sistemas personalizados</p>
             <div style="margin-top: 2rem;">
                 <a href="/contacto" class="btn">
-                    <i class="fas fa-phone-alt"></i> Solicitar Demo Personalizada
+                    <i class="fas fa-envelope"></i> Contactar a un Especialista
                 </a>
-                <a href="/" class="btn btn-outline">
+                <a href="https://rollillo.github.io/Page/#contact" class="btn btn-outline">
                     <i class="fas fa-home"></i> Volver al Inicio
                 </a>
             </div>
@@ -571,7 +475,7 @@
         <div class="container">
             <div class="footer-logo">KI-LABOR</div>
             <div class="footer-links">
-                <a href="/">Inicio</a>
+                <a href="/index.html">Inicio</a>
                 <a href="/servicios">Servicios</a>
                 <a href="/nosotros">Nosotros</a>
                 <a href="/portafolio">Portafolio</a>

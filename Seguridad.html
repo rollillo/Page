@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Juegos Interactivos | KI-LABOR</title>
+    <title>Sistema de Detección Biométrica | KI-LABOR</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        /* Estilos base consistentes */
+        /* Estilos base consistentes con la página principal */
         :root {
             --navy-blue: #001a33;
             --dark-navy: #000d1a;
             --light-blue: #003366;
-            --orange: #FF6B00;
+            --orange: #4876dab0;
             --white: #ffffff;
             --light-white: rgba(255,255,255,0.9);
             --dark-gray: #e6e6e6;
@@ -89,7 +89,7 @@
         
         /* Hero Section */
         .service-hero {
-            background: linear-gradient(rgba(0, 10, 26, 0.85), rgba(0, 10, 26, 0.9)), url('https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+            background: linear-gradient(rgba(0, 10, 26, 0.85), rgba(0, 10, 26, 0.9)), url('https://images.unsplash.com/photo-1563906267088-b029e7101114?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
             height: 60vh;
             display: flex;
             align-items: center;
@@ -164,16 +164,16 @@
             opacity: 0.8;
         }
         
-        /* Technology Stack */
-        .tech-stack {
+        /* Technology Section */
+        .technology-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
             margin-top: 3rem;
         }
         
-        .tech-card {
-            background: rgba(10, 20, 40, 0.6);
+        .technology-card {
+            background: rgba(10, 20, 40, 0.9);
             border-radius: 15px;
             padding: 2rem;
             border: 1px solid rgba(255, 255, 255, 0.05);
@@ -181,59 +181,53 @@
             text-align: center;
         }
         
-        .tech-card:hover {
+        .technology-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-            border-color: rgba(255, 107, 0, 0.3);
+            border-color: rgba(25, 0, 255, 0.3);
         }
         
-        .tech-icon {
+        .technology-icon {
             font-size: 3rem;
             color: var(--orange);
             margin-bottom: 1.5rem;
         }
         
-        /* Game Features */
-        .features-container {
+        /* Features Section */
+        .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
             margin-top: 3rem;
         }
         
-        .feature-item {
+        .feature-card {
             background: rgba(0, 26, 51, 0.4);
             border-radius: 10px;
             padding: 1.5rem;
             border-left: 4px solid var(--orange);
-            transition: all 0.3s ease;
         }
         
-        .feature-item:hover {
-            transform: translateY(-5px);
-            background: rgba(0, 51, 102, 0.4);
-        }
-        
-        .feature-item h3 {
+        .feature-card h3 {
             color: var(--orange);
             margin-bottom: 1rem;
             display: flex;
             align-items: center;
         }
         
-        .feature-item h3 i {
+        .feature-card h3 i {
             margin-right: 10px;
         }
         
-        /* Game Examples */
-        .games-showcase {
+        /* Use Cases */
+        .use-cases {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
             margin-top: 3rem;
         }
         
-        .game-card {
+        .use-case {
             background: rgba(0, 51, 102, 0.2);
             border-radius: 10px;
             overflow: hidden;
@@ -241,45 +235,34 @@
             transition: all 0.3s ease;
         }
         
-        .game-card:hover {
+        .use-case:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
         }
         
-        .game-card img {
+        .use-case img {
             width: 100%;
             height: 200px;
             object-fit: cover;
         }
         
-        .game-content {
+        .use-case-content {
             padding: 1.5rem;
         }
         
-        .game-card h3 {
+        .use-case h3 {
             margin-bottom: 0.5rem;
             color: var(--orange);
-        }
-        
-        .game-tag {
-            display: inline-block;
-            background: rgba(255, 107, 0, 0.2);
-            color: var(--orange);
-            padding: 0.3rem 0.8rem;
-            border-radius: 50px;
-            font-size: 0.8rem;
-            margin-right: 0.5rem;
-            margin-bottom: 0.5rem;
         }
         
         /* Demo Section */
         .demo-container {
-            background: rgba(0, 26, 51, 0.5);
+            background: rgba(255, 255, 255, 0.1);
             border-radius: 15px;
             padding: 3rem;
             margin-top: 3rem;
             text-align: center;
-            border: 1px solid rgba(255, 107, 0, 0.2);
+            border: 1px solid rgba(68, 0, 255, 0.2);
         }
         
         .demo-visualization {
@@ -301,31 +284,26 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
         }
         
-        /* Benefits Section */
-        .benefits-grid {
+        /* Accuracy Metrics */
+        .metrics-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
         }
         
-        .benefit-card {
+        .metric-card {
             background: rgba(0, 51, 102, 0.3);
+            padding: 1.5rem;
             border-radius: 10px;
-            padding: 2rem;
             text-align: center;
-            transition: all 0.3s ease;
         }
         
-        .benefit-card:hover {
-            transform: translateY(-5px);
-            background: rgba(0, 51, 102, 0.4);
-        }
-        
-        .benefit-icon {
+        .metric-value {
             font-size: 2.5rem;
+            font-weight: 900;
             color: var(--orange);
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
         }
         
         /* CTA Section */
@@ -349,9 +327,9 @@
         }
         
         .btn:hover {
-            background: #e05a00;
+            background: #2e37b8;
             transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(255, 107, 0, 0.4);
+            box-shadow: 0 15px 30px rgba(47, 0, 255, 0.4);
         }
         
         .btn-outline {
@@ -431,7 +409,7 @@
         <div class="container">
             <div class="navbar">
                 <div class="logo">
-                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBmaWxsPSIjRkZBNTAwIiBkPSJNMjU2IDhDMTE5IDggOCAxMTkgOCAyNTZzMTExIDI0OCAyNDggMjQ4IDI0OC0xMTEgMjQ4LTI0OFMzOTMgOCAyNTYgOHptMCA0NDhjLTExMC41IDAtMjAwLTg5LjUtMjAwLTIwMFMxNDUuNSA1NiAyNTYgNTZzMjAwIDg5LjUgMjAwIDIwMC04OS41IDIwMC0yMDAgMjAwWm0xMDEuOC0yNjEuN2wtODQuOS02MS43Yy0zLjEtMi40LTcuNS0yLjgtMTEuMS0uN0MtMjU3IDk1LjMgMjU3IDk2IDI1NyA5NnYxNjBjMCAzLjMgMi43IDYgNiA2czYtMi43IDYtNlYxODQuNWw4NC45IDYxLjdjMi43IDIgNi41IDEuNiA4LjktMS4xIDIuNS0yLjcgMi02LjYtLjktOC45WiIvPjwvc3ZnPg==" alt="KI-LABOR Logo">
+                    <img src="Logo_1.png" alt="KI-LABOR Logo">
                     <div class="logo-text">
                         <h1>KI-LABOR</h1>
                     </div>
@@ -443,45 +421,45 @@
     <!-- Hero Section -->
     <section class="service-hero">
         <div class="service-hero-content">
-            <h1>Juegos Interactivos Inteligentes</h1>
-            <p>Experiencias inmersivas que combinan reconocimiento de movimiento, IA y machine learning para promover el bienestar físico y cognitivo</p>
+            <h1>Sistema de Detección Biométrica</h1>
+            <p>Solución de seguridad avanzada con identificación biométrica y detección de rostros en tiempo real</p>
         </div>
     </section>
     
-    <!-- Technology Stack Section -->
+    <!-- Technology Section -->
     <section class="service-section">
         <div class="container">
             <div class="section-title">
-                <h2>Tecnología Avanzada</h2>
-                <p>Integramos las últimas innovaciones para crear experiencias de juego únicas</p>
+                <h2>Tecnologías de Reconocimiento</h2>
+                <p>Nuestro sistema combina múltiples técnicas biométricas para máxima precisión y seguridad</p>
             </div>
             
-            <div class="tech-stack">
-                <div class="tech-card">
-                    <div class="tech-icon">
-                        <i class="fas fa-video"></i>
+            <div class="technology-container">
+                <div class="technology-card">
+                    <div class="technology-icon">
+                        <i class="fas fa-user-tag"></i>
                     </div>
-                    <h3>Reconocimiento de Movimiento</h3>
-                    <p>Tecnología de cámara avanzada que detecta y analiza movimientos corporales en tiempo real sin necesidad de dispositivos adicionales</p>
-                    <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" alt="Reconocimiento de movimiento" style="width:100%; border-radius:8px; margin-top:1.5rem;">
+                    <h3>Reconocimiento Facial</h3>
+                    <p>Análisis de más de 80 puntos faciales para identificación precisa incluso en condiciones de baja iluminación</p>
+                    <img src="https://images.unsplash.com/photo-1617854818583-09e7f077a156?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Reconocimiento facial" style="width:100%; border-radius:8px; margin-top:1.5rem;">
                 </div>
                 
-                <div class="tech-card">
-                    <div class="tech-icon">
-                        <i class="fas fa-robot"></i>
+                <div class="technology-card">
+                    <div class="technology-icon">
+                        <i class="fas fa-fingerprint"></i>
                     </div>
-                    <h3>Asistentes Virtuales con IA</h3>
-                    <p>Compañeros de juego inteligentes que adaptan la experiencia, ofrecen consejos personalizados y aprenden de tus patrones de juego</p>
-                    <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Asistentes virtuales" style="width:100%; border-radius:8px; margin-top:1.5rem;">
+                    <h3>Huella Digital</h3>
+                    <p>Escaneo táctil y óptico con algoritmos resistentes a falsificaciones y réplicas</p>
+                    <img src="https://images.unsplash.com/photo-1563906267088-b029e7101114?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Huella digital" style="width:100%; border-radius:8px; margin-top:1.5rem;">
                 </div>
                 
-                <div class="tech-card">
-                    <div class="tech-icon">
-                        <i class="fas fa-brain"></i>
+                <div class="technology-card">
+                    <div class="technology-icon">
+                        <i class="fas fa-eye"></i>
                     </div>
-                    <h3>Machine Learning Adaptativo</h3>
-                    <p>Algoritmos que personalizan la dificultad y contenido del juego basado en el rendimiento y preferencias del usuario</p>
-                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Machine learning" style="width:100%; border-radius:8px; margin-top:1.5rem;">
+                    <h3>Reconocimiento de Iris</h3>
+                    <p>Tecnología de escaneo ocular con precisión de 1 en 1 millón para máxima seguridad</p>
+                    <img src="https://images.unsplash.com/photo-1583385276751-0b14e0a7f66e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Reconocimiento de iris" style="width:100%; border-radius:8px; margin-top:1.5rem;">
                 </div>
             </div>
         </div>
@@ -491,125 +469,100 @@
     <section class="service-section">
         <div class="container">
             <div class="section-title">
-                <h2>Características Clave</h2>
-                <p>Lo que hace únicos a nuestros juegos interactivos</p>
+                <h2>Características Principales</h2>
+                <p>Funcionalidades avanzadas de nuestro sistema de detección biométrica</p>
             </div>
             
-            <div class="features-container">
-                <div class="feature-item">
-                    <h3><i class="fas fa-running"></i> Tracking Corporal Completo</h3>
-                    <p>Detección precisa de 32 puntos corporales para una interacción natural y sin controles</p>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3><i class="fas fa-bolt"></i> Tiempo Real</h3>
+                    <p>Procesamiento en menos de 500ms con latencia mínima para aplicaciones críticas</p>
                 </div>
                 
-                <div class="feature-item">
-                    <h3><i class="fas fa-user-cog"></i> Adaptación en Tiempo Real</h3>
-                    <p>Dificultad que se ajusta automáticamente al nivel de habilidad del jugador</p>
+                <div class="feature-card">
+                    <h3><i class="fas fa-user-shield"></i> Anti-Spoofing</h3>
+                    <p>Detección de intentos de suplantación con fotografías, máscaras o grabaciones</p>
                 </div>
                 
-                <div class="feature-item">
-                    <h3><i class="fas fa-heartbeat"></i> Monitoreo de Bienestar</h3>
-                    <p>Seguimiento de actividad física y progreso cognitivo con informes detallados</p>
+                <div class="feature-card">
+                    <h3><i class="fas fa-mask"></i> Reconocimiento con Mascarillas</h3>
+                    <p>Identificación precisa incluso cuando los usuarios llevan cubrebocas</p>
                 </div>
                 
-                <div class="feature-item">
-                    <h3><i class="fas fa-chart-line"></i> Retroalimentación Inteligente</h3>
-                    <p>Análisis de desempeño con recomendaciones personalizadas para mejorar</p>
+                <div class="feature-card">
+                    <h3><i class="fas fa-database"></i> Base de Datos Segura</h3>
+                    <p>Almacenamiento cifrado de plantillas biométricas con protección blockchain</p>
                 </div>
                 
-                <div class="feature-item">
-                    <h3><i class="fas fa-users"></i> Modo Multijugador</h3>
-                    <p>Experiencias colaborativas o competitivas con reconocimiento de múltiples jugadores</p>
+                <div class="feature-card">
+                    <h3><i class="fas fa-network-wired"></i> Integración API</h3>
+                    <p>Conectividad con sistemas existentes mediante APIs RESTful seguras</p>
                 </div>
                 
-                <div class="feature-item">
-                    <h3><i class="fas fa-gamepad"></i> Contenido Dinámico</h3>
-                    <p>Niveles y desafíos que se generan proceduralmente según las preferencias del usuario</p>
+                <div class="feature-card">
+                    <h3><i class="fas fa-chart-bar"></i> Análisis de Comportamiento</h3>
+                    <p>Detección de patrones sospechosos y alertas en tiempo real</p>
+                </div>
+            </div>
+            
+            <!-- Accuracy Metrics -->
+            <div class="section-title" style="margin-top: 4rem;">
+                <h2>Precisión Comprobada</h2>
+                <p>Métricas de rendimiento validadas en entornos reales</p>
+            </div>
+            
+            <div class="metrics-container">
+                <div class="metric-card">
+                    <div class="metric-value">99.8%</div>
+                    <p>Tasa de reconocimiento</p>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">0.01%</div>
+                    <p>Tasa de falsos positivos</p>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">0.2%</div>
+                    <p>Tasa de falsos negativos</p>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">450ms</div>
+                    <p>Tiempo promedio de respuesta</p>
                 </div>
             </div>
         </div>
     </section>
     
-    <!-- Game Examples Section -->
+    <!-- Use Cases Section -->
     <section class="service-section">
         <div class="container">
             <div class="section-title">
-                <h2>Nuestros Juegos Destacados</h2>
-                <p>Experiencias diseñadas para divertir, educar y promover el bienestar</p>
+                <h2>Aplicaciones</h2>
+                <p>Implementaciones prácticas de nuestro sistema de detección biométrica</p>
             </div>
             
-            <div class="games-showcase">
-                <div class="game-card">
-                    <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="FitQuest">
-                    <div class="game-content">
-                        <h3>FitQuest</h3>
-                        <span class="game-tag">Fitness</span>
-                        <span class="game-tag">Aventura</span>
-                        <p>Aventura interactiva que transforma ejercicios en movimientos mágicos para derrotar criaturas virtuales</p>
+            <div class="use-cases">
+                <div class="use-case">
+                    <img src="https://images.unsplash.com/photo-1551524559-8af4e6624178?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1526&q=80" alt="Control de acceso">
+                    <div class="use-case-content">
+                        <h3>Control de Acceso</h3>
+                        <p>Sistemas seguros para edificios corporativos, áreas restringidas y centros de datos</p>
                     </div>
                 </div>
                 
-                <div class="game-card">
-                    <img src="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1478&q=80" alt="NeuroPlay">
-                    <div class="game-content">
-                        <h3>NeuroPlay</h3>
-                        <span class="game-tag">Cognitivo</span>
-                        <span class="game-tag">Educativo</span>
-                        <p>Desafíos mentales que se adaptan a tus capacidades cognitivas para mejorar memoria y concentración</p>
+                <div class="use-case">
+                    <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1075&q=80" alt="Pagos biométricos">
+                    <div class="use-case-content">
+                        <h3>Pagos Biométricos</h3>
+                        <p>Autenticación sin contacto para transacciones financieras y comercio minorista</p>
                     </div>
                 </div>
                 
-                <div class="game-card">
-                    <img src="https://images.unsplash.com/photo-1560253023-3ec5d502959f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="DanceMind">
-                    <div class="game-content">
-                        <h3>DanceMind</h3>
-                        <span class="game-tag">Baile</span>
-                        <span class="game-tag">Social</span>
-                        <p>Combina coreografías con desafíos mentales para una experiencia de baile única y estimulante</p>
+                <div class="use-case">
+                    <img src="https://images.unsplash.com/photo-1581093196277-1c6ddbba423e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Seguridad fronteriza">
+                    <div class="use-case-content">
+                        <h3>Seguridad Fronteriza</h3>
+                        <p>Identificación automatizada en aeropuertos y puntos de control migratorio</p>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Benefits Section -->
-    <section class="service-section">
-        <div class="container">
-            <div class="section-title">
-                <h2>Beneficios para los Usuarios</h2>
-                <p>Cómo nuestros juegos interactivos mejoran la calidad de vida</p>
-            </div>
-            
-            <div class="benefits-grid">
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <i class="fas fa-heart"></i>
-                    </div>
-                    <h3>Salud Física</h3>
-                    <p>Promueve la actividad física regular de forma divertida y motivadora</p>
-                </div>
-                
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <h3>Agilidad Mental</h3>
-                    <p>Estimula funciones cognitivas como memoria, atención y resolución de problemas</p>
-                </div>
-                
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <i class="fas fa-smile"></i>
-                    </div>
-                    <h3>Bienestar Emocional</h3>
-                    <p>Reduce el estrés y mejora el estado de ánimo a través del juego</p>
-                </div>
-                
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3>Conexión Social</h3>
-                    <p>Fomenta la interacción social en entornos virtuales y presenciales</p>
                 </div>
             </div>
         </div>
@@ -619,25 +572,25 @@
     <section class="service-section">
         <div class="container">
             <div class="section-title">
-                <h2>Demostración Interactiva</h2>
-                <p>Prueba una versión simplificada de nuestra tecnología</p>
+                <h2>Demostración</h2>
+                <p>Experimenta nuestro sistema de detección biométrica en acción</p>
             </div>
             
             <div class="demo-container">
-                <h3>Experiencia de Juego</h3>
-                <p>Mueve tu cuerpo para interactuar con los elementos en pantalla</p>
+                <h3>Simulador de Reconocimiento Facial</h3>
+                <p>Prueba cómo nuestro sistema identifica rostros en diferentes condiciones</p>
                 
                 <div class="demo-visualization">
-                    <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Demo juego interactivo" style="max-height: 250px;">
-                    <p style="font-style: italic; color: var(--orange); margin-top: 1rem;">[Área de demostración interactiva - Mueve tu cuerpo para controlar el juego]</p>
+                    <img src="https://images.unsplash.com/photo-1617854818583-09e7f077a156?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Demo reconocimiento facial" style="max-height: 300px;">
+                    <p style="font-style: italic; color: var(--orange);">[Área interactiva del simulador de reconocimiento facial]</p>
                 </div>
                 
                 <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
                     <a href="#" class="btn">
-                        <i class="fas fa-gamepad"></i> Probar Demo Completa
+                        <i class="fas fa-camera"></i> Probar con Mi Webcam
                     </a>
                     <a href="#" class="btn btn-outline">
-                        <i class="fas fa-video"></i> Ver Video Explicativo
+                        <i class="fas fa-video"></i> Ver Video Demo
                     </a>
                 </div>
             </div>
@@ -647,14 +600,14 @@
     <!-- CTA Section -->
     <section class="cta-section">
         <div class="container">
-            <h2>¿Listo para revolucionar tu experiencia de juego?</h2>
-            <p>Lleva la interacción humano-computadora al siguiente nivel con nuestras soluciones</p>
+            <h2>¿Necesitas una solución de seguridad biométrica?</h2>
+            <p>Protege tus instalaciones y datos con nuestra tecnología de vanguardia</p>
             <div style="margin-top: 2rem;">
                 <a href="/contacto" class="btn">
-                    <i class="fas fa-envelope"></i> Contactar a Nuestro Equipo
+                    <i class="fas fa-phone-alt"></i> Solicitar Cotización
                 </a>
-                <a href="/" class="btn btn-outline">
-                    <i class="fas fa-arrow-left"></i> Volver al Inicio
+                <a href="https://rollillo.github.io/Page/#contact" class="btn btn-outline">
+                    <i class="fas fa-home"></i> Volver al Inicio
                 </a>
             </div>
         </div>
@@ -665,11 +618,11 @@
         <div class="container">
             <div class="footer-logo">KI-LABOR</div>
             <div class="footer-links">
-                <a href="/">Inicio</a>
-                <a href="/servicios">Servicios</a>
-                <a href="/nosotros">Nosotros</a>
-                <a href="/portafolio">Portafolio</a>
-                <a href="/contacto">Contacto</a>
+                <a href="https://rollillo.github.io/Page/">Inicio</a>
+                <a href="https://rollillo.github.io/Page/#services">Servicios</a>
+                <a href="https://rollillo.github.io/Page/#about">Nosotros</a>
+                <a href="https://rollillo.github.io/Page/#portfolio">Portafolio</a>
+                <a href="https://rollillo.github.io/Page/#contact">Contacto</a>
             </div>
             <div class="copyright">
                 &copy; 2023 KI-LABOR. Todos los derechos reservados.

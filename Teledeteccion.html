@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Juegos Interactivos | KI-LABOR</title>
+    <title>Teledetección e IA | KI-LABOR</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        /* Estilos base consistentes */
         :root {
             --navy-blue: #001a33;
             --dark-navy: #000d1a;
@@ -89,7 +88,7 @@
         
         /* Hero Section */
         .service-hero {
-            background: linear-gradient(rgba(0, 10, 26, 0.85), rgba(0, 10, 26, 0.9)), url('https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+            background: linear-gradient(rgba(0, 10, 26, 0.85), rgba(0, 10, 26, 0.9)), url('https://images.unsplash.com/photo-1464802686167-b939a6910659?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1630&q=80') no-repeat center center/cover;
             height: 60vh;
             display: flex;
             align-items: center;
@@ -184,7 +183,7 @@
         .tech-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-            border-color: rgba(68, 0, 255, 0.3);
+            border-color: rgba(255, 107, 0, 0.3);
         }
         
         .tech-icon {
@@ -193,47 +192,56 @@
             margin-bottom: 1.5rem;
         }
         
-        /* Game Features */
-        .features-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
+        /* Process Flow */
+        .process-flow {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             margin-top: 3rem;
+            position: relative;
         }
         
-        .feature-item {
-            background: rgba(0, 26, 51, 0.4);
-            border-radius: 10px;
-            padding: 1.5rem;
+        .process-step {
+            background: rgba(0, 51, 102, 0.4);
+            border-radius: 15px;
+            padding: 1.5rem 2rem;
+            margin-bottom: 2rem;
+            width: 80%;
+            position: relative;
             border-left: 4px solid var(--orange);
             transition: all 0.3s ease;
         }
         
-        .feature-item:hover {
-            transform: translateY(-5px);
-            background: rgba(0, 51, 102, 0.4);
+        .process-step:hover {
+            transform: translateX(10px);
+            background: rgba(0, 51, 102, 0.6);
         }
         
-        .feature-item h3 {
+        .process-step h3 {
             color: var(--orange);
             margin-bottom: 1rem;
             display: flex;
             align-items: center;
         }
         
-        .feature-item h3 i {
-            margin-right: 10px;
+        .process-step h3 i {
+            margin-right: 15px;
+            font-size: 1.5rem;
         }
         
-        /* Game Examples */
-        .games-showcase {
+        .process-step:nth-child(even) {
+            align-self: flex-end;
+        }
+        
+        /* Applications */
+        .applications-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
             margin-top: 3rem;
         }
         
-        .game-card {
+        .application-card {
             background: rgba(0, 51, 102, 0.2);
             border-radius: 10px;
             overflow: hidden;
@@ -241,29 +249,29 @@
             transition: all 0.3s ease;
         }
         
-        .game-card:hover {
+        .application-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
         }
         
-        .game-card img {
+        .application-card img {
             width: 100%;
             height: 200px;
             object-fit: cover;
         }
         
-        .game-content {
+        .application-content {
             padding: 1.5rem;
         }
         
-        .game-card h3 {
+        .application-card h3 {
             margin-bottom: 0.5rem;
             color: var(--orange);
         }
         
-        .game-tag {
+        .application-tag {
             display: inline-block;
-            background: rgba(38, 0, 255, 0.2);
+            background: rgba(0, 4, 255, 0.13);
             color: var(--orange);
             padding: 0.3rem 0.8rem;
             border-radius: 50px;
@@ -272,60 +280,50 @@
             margin-bottom: 0.5rem;
         }
         
-        /* Demo Section */
-        .demo-container {
-            background: rgba(0, 26, 51, 0.5);
-            border-radius: 15px;
-            padding: 3rem;
-            margin-top: 3rem;
-            text-align: center;
-            border: 1px solid rgba(38, 0, 255, 0.2);
-        }
-        
-        .demo-visualization {
-            background: rgba(0, 0, 0, 0.3);
-            padding: 2rem;
-            border-radius: 10px;
-            margin: 2rem 0;
-            min-height: 300px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-        }
-        
-        .demo-visualization img {
-            max-width: 100%;
-            border-radius: 8px;
-            margin-bottom: 1rem;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-        }
-        
-        /* Benefits Section */
-        .benefits-grid {
+        /* Case Studies */
+        .case-studies {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 2rem;
             margin-top: 3rem;
         }
         
-        .benefit-card {
-            background: rgba(0, 51, 102, 0.3);
+        .case-study {
+            background: rgba(0, 26, 51, 0.5);
             border-radius: 10px;
             padding: 2rem;
-            text-align: center;
             transition: all 0.3s ease;
         }
         
-        .benefit-card:hover {
+        .case-study:hover {
             transform: translateY(-5px);
-            background: rgba(0, 51, 102, 0.4);
+            background: rgba(0, 26, 51, 0.7);
         }
         
-        .benefit-icon {
-            font-size: 2.5rem;
+        .case-study h3 {
             color: var(--orange);
             margin-bottom: 1rem;
+        }
+        
+        .case-study-stats {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1.5rem;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--orange);
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.8;
         }
         
         /* CTA Section */
@@ -338,20 +336,20 @@
             display: inline-block;
             background: var(--orange);
             color: var(--white);
-            padding: 0.5rem 2.5rem;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
+            padding: 1rem 2.5rem;
             border: none;
-            cursor: pointer;
-            box-shadow: 0 10px 20px rgba(72, 118, 218, 0.3);
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.4s ease;
+            margin: 1rem;
         }
         
         .btn:hover {
-            background: rgba(72, 118, 218, 0.8);
+            background: #1600e0;
             transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(72, 118, 218, 0.4);
+            box-shadow: 0 15px 30px rgba(4, 0, 255, 0.4);
         }
         
         .btn-outline {
@@ -422,6 +420,14 @@
             .section-title h2 {
                 font-size: 2rem;
             }
+            
+            .process-step {
+                width: 100%;
+            }
+            
+            .process-step:nth-child(even) {
+                align-self: flex-start;
+            }
         }
     </style>
 </head>
@@ -443,8 +449,8 @@
     <!-- Hero Section -->
     <section class="service-hero">
         <div class="service-hero-content">
-            <h1>Juegos Interactivos Inteligentes</h1>
-            <p>Experiencias inmersivas que combinan reconocimiento de movimiento, IA y machine learning para promover el bienestar físico y cognitivo</p>
+            <h1>Teledetección e Inteligencia Artificial</h1>
+            <p>Soluciones avanzadas para el análisis automatizado de imágenes satelitales mediante aprendizaje profundo y por refuerzo</p>
         </div>
     </section>
     
@@ -452,193 +458,184 @@
     <section class="service-section">
         <div class="container">
             <div class="section-title">
-                <h2>Tecnología Avanzada</h2>
-                <p>Integramos las últimas innovaciones para crear experiencias de juego únicas</p>
+                <h2>Tecnologías Clave</h2>
+                <p>Combinamos lo último en sensado remoto con técnicas avanzadas de IA</p>
             </div>
             
             <div class="tech-stack">
                 <div class="tech-card">
                     <div class="tech-icon">
-                        <i class="fas fa-video"></i>
+                        <i class="fas fa-satellite"></i>
                     </div>
-                    <h3>Reconocimiento de Movimiento</h3>
-                    <p>Tecnología de cámara avanzada que detecta y analiza movimientos corporales en tiempo real sin necesidad de dispositivos adicionales</p>
-                    <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" alt="Reconocimiento de movimiento" style="width:100%; border-radius:8px; margin-top:1.5rem;">
+                    <h3>Imágenes Multiespectrales</h3>
+                    <p>Procesamiento de datos de satélites como Sentinel, Landsat y plataformas comerciales con resolución espectral y temporal avanzada</p>
+                    <img src="https://images.unsplash.com/photo-1464802686167-b939a6910659?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1630&q=80" alt="Imágenes satelitales" style="width:100%; border-radius:8px; margin-top:1.5rem;">
+                </div>
+                
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Aprendizaje Profundo</h3>
+                    <p>Redes neuronales convolucionales (CNN) y transformadores para clasificación de usos de suelo, detección de cambios y segmentación semántica</p>
+                    <img src="Convolucionales.jpg" alt="Aprendizaje profundo" style="width:100%; border-radius:8px; margin-top:1.5rem;">
                 </div>
                 
                 <div class="tech-card">
                     <div class="tech-icon">
                         <i class="fas fa-robot"></i>
                     </div>
-                    <h3>Asistentes Virtuales con IA</h3>
-                    <p>Compañeros de juego inteligentes que adaptan la experiencia, ofrecen consejos personalizados y aprenden de tus patrones de juego</p>
-                    <img src="asistente virtual.webp" alt="Asistentes virtuales" style="width:100%; border-radius:8px; margin-top:1.5rem;">
-                </div>
-                
-                <div class="tech-card">
-                    <div class="tech-icon">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <h3>Machine Learning Adaptativo</h3>
-                    <p>Algoritmos que personalizan la dificultad y contenido del juego basado en el rendimiento y preferencias del usuario</p>
-                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Machine learning" style="width:100%; border-radius:8px; margin-top:1.5rem;">
+                    <h3>Aprendizaje por Refuerzo</h3>
+                    <p>Algoritmos que optimizan automáticamente rutas de análisis y patrones de búsqueda en grandes conjuntos de datos geoespaciales</p>
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Aprendizaje por refuerzo" style="width:100%; border-radius:8px; margin-top:1.5rem;">
                 </div>
             </div>
         </div>
     </section>
     
-    <!-- Features Section -->
+    <!-- Process Flow Section -->
     <section class="service-section">
         <div class="container">
             <div class="section-title">
-                <h2>Características Clave</h2>
-                <p>Lo que hace únicos a nuestros juegos interactivos</p>
+                <h2>Nuestro Proceso</h2>
+                <p>Flujo de trabajo para el análisis automatizado de territorios</p>
             </div>
             
-            <div class="features-container">
-                <div class="feature-item">
-                    <h3><i class="fas fa-running"></i> Tracking Corporal Completo</h3>
-                    <p>Detección precisa de 32 puntos corporales para una interacción natural y sin controles</p>
+            <div class="process-flow">
+                <div class="process-step">
+                    <h3><i class="fas fa-cloud-download-alt"></i> Adquisición de Datos</h3>
+                    <p>Integración de múltiples fuentes satelitales y aéreas con diferentes resoluciones espectrales, espaciales y temporales</p>
                 </div>
                 
-                <div class="feature-item">
-                    <h3><i class="fas fa-user-cog"></i> Adaptación en Tiempo Real</h3>
-                    <p>Dificultad que se ajusta automáticamente al nivel de habilidad del jugador</p>
+                <div class="process-step">
+                    <h3><i class="fas fa-sliders-h"></i> Preprocesamiento</h3>
+                    <p>Corrección atmosférica, calibración radiométrica, corrección geométrica y fusión de datos multiespectrales</p>
                 </div>
                 
-                <div class="feature-item">
-                    <h3><i class="fas fa-heartbeat"></i> Monitoreo de Bienestar</h3>
-                    <p>Seguimiento de actividad física y progreso cognitivo con informes detallados</p>
+                <div class="process-step">
+                    <h3><i class="fas fa-project-diagram"></i> Segmentación</h3>
+                    <p>Identificación automática de características mediante redes neuronales profundas entrenadas con datos geoetiquetados</p>
                 </div>
                 
-                <div class="feature-item">
-                    <h3><i class="fas fa-chart-line"></i> Retroalimentación Inteligente</h3>
-                    <p>Análisis de desempeño con recomendaciones personalizadas para mejorar</p>
+                <div class="process-step">
+                    <h3><i class="fas fa-chart-bar"></i> Análisis Temporal</h3>
+                    <p>Detección de cambios y evolución de patrones mediante series de tiempo y aprendizaje por refuerzo</p>
                 </div>
                 
-                <div class="feature-item">
-                    <h3><i class="fas fa-users"></i> Modo Multijugador</h3>
-                    <p>Experiencias colaborativas o competitivas con reconocimiento de múltiples jugadores</p>
-                </div>
-                
-                <div class="feature-item">
-                    <h3><i class="fas fa-gamepad"></i> Contenido Dinámico</h3>
-                    <p>Niveles y desafíos que se generan proceduralmente según las preferencias del usuario</p>
+                <div class="process-step">
+                    <h3><i class="fas fa-map-marked-alt"></i> Generación de Informes</h3>
+                    <p>Visualización interactiva de resultados con capas GIS y métricas cuantitativas para la toma de decisiones</p>
                 </div>
             </div>
         </div>
     </section>
     
-    <!-- Game Examples Section -->
+    <!-- Applications Section -->
     <section class="service-section">
         <div class="container">
             <div class="section-title">
-                <h2>Nuestros Juegos Destacados</h2>
-                <p>Experiencias diseñadas para divertir, educar y promover el bienestar</p>
+                <h2>Aplicaciones</h2>
+                <p>Áreas donde nuestra solución marca la diferencia</p>
             </div>
             
-            <div class="games-showcase">
-                <div class="game-card">
-                    <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="FitQuest">
-                    <div class="game-content">
-                        <h3>MovIA</h3>
-                        <span class="game-tag">Fitness</span>
-                        <span class="game-tag">Aventura</span>
-                        <p>Juegos interactivos diseñados para facilitar la interacción tanto de adultos mayores como de niños</p>
+            <div class="applications-grid">
+                <div class="application-card">
+                    <img src="https://images.unsplash.com/photo-1470114716159-e389f8712fda?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Planificación territorial">
+                    <div class="application-content">
+                        <h3>Planificación Territorial</h3>
+                        <span class="application-tag">Urbanismo</span>
+                        <span class="application-tag">Desarrollo</span>
+                        <p>Análisis de crecimiento urbano, identificación de áreas de expansión y evaluación de infraestructura</p>
                     </div>
                 </div>
                 
-                <div class="game-card">
-                    <img src="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1478&q=80" alt="NeuroPlay">
-                    <div class="game-content">
-                        <h3>NeuroPlay</h3>
-                        <span class="game-tag">Cognitivo</span>
-                        <span class="game-tag">Educativo</span>
-                        <p>Desafíos mentales que se adaptan a tus capacidades cognitivas para mejorar memoria y concentración</p>
+                <div class="application-card">
+                    <img src="https://images.unsplash.com/photo-1413752362258-7af2a667b590?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Monitoreo ambiental">
+                    <div class="application-content">
+                        <h3>Monitoreo Ambiental</h3>
+                        <span class="application-tag">Ecología</span>
+                        <span class="application-tag">Sostenibilidad</span>
+                        <p>Evaluación de deforestación, degradación de suelos, calidad del agua y conservación de ecosistemas</p>
                     </div>
                 </div>
                 
-                <div class="game-card">
-                    <img src="https://images.unsplash.com/photo-1560253023-3ec5d502959f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="DanceMind">
-                    <div class="game-content">
-                        <h3>DanceMind</h3>
-                        <span class="game-tag">Baile</span>
-                        <span class="game-tag">Social</span>
-                        <p>Combina coreografías con desafíos mentales para una experiencia de baile única y estimulante</p>
+                <div class="application-card">
+                    <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1472&q=80" alt="Gestión de desastres">
+                    <div class="application-content">
+                        <h3>Gestión de Desastres</h3>
+                        <span class="application-tag">Emergencias</span>
+                        <span class="application-tag">Prevención</span>
+                        <p>Detección temprana de riesgos, evaluación de daños post-desastre y planificación de respuesta</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
     
-    <!-- Benefits Section -->
+    <!-- Case Studies Section -->
     <section class="service-section">
         <div class="container">
             <div class="section-title">
-                <h2>Beneficios para los Usuarios</h2>
-                <p>Cómo nuestros juegos interactivos mejoran la calidad de vida</p>
+                <h2>Casos de Estudio</h2>
+                <p>Resultados concretos de nuestra tecnología en acción</p>
             </div>
             
-            <div class="benefits-grid">
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <i class="fas fa-heart"></i>
+            <div class="case-studies">
+                <div class="case-study">
+                    <h3>Monitoreo de Cultivos</h3>
+                    <p>Sistema implementado para clasificación automática de tipos de cultivos y predicción de rendimientos en el valle agrícola de Aconcagua</p>
+                    <div class="case-study-stats">
+                        <div class="stat-item">
+                            <div class="stat-value">94%</div>
+                            <div class="stat-label">Precisión</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">10x</div>
+                            <div class="stat-label">Más rápido</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">24/7</div>
+                            <div class="stat-label">Monitoreo</div>
+                        </div>
                     </div>
-                    <h3>Salud Física</h3>
-                    <p>Promueve la actividad física regular de forma divertida y motivadora</p>
                 </div>
                 
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <i class="fas fa-brain"></i>
+                <div class="case-study">
+                    <h3>Detección de Incendios</h3>
+                    <p>Algoritmos para identificación temprana de puntos calientes y predicción de propagación en zonas forestales</p>
+                    <div class="case-study-stats">
+                        <div class="stat-item">
+                            <div class="stat-value">30min</div>
+                            <div class="stat-label">Detección</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">85%</div>
+                            <div class="stat-label">Reducción falsos positivos</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">5km</div>
+                            <div class="stat-label">Resolución</div>
+                        </div>
                     </div>
-                    <h3>Agilidad Mental</h3>
-                    <p>Estimula funciones cognitivas como memoria, atención y resolución de problemas</p>
                 </div>
                 
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <i class="fas fa-smile"></i>
+                <div class="case-study">
+                    <h3>Planificación Urbana</h3>
+                    <p>Análisis automatizado de crecimiento urbano y cálculo de índices de vegetación para Santiago Metropolitano</p>
+                    <div class="case-study-stats">
+                        <div class="stat-item">
+                            <div class="stat-value">200+</div>
+                            <div class="stat-label">Indicadores</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">15años</div>
+                            <div class="stat-label">Histórico</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">1m</div>
+                            <div class="stat-label">Precisión</div>
+                        </div>
                     </div>
-                    <h3>Bienestar Emocional</h3>
-                    <p>Reduce el estrés y mejora el estado de ánimo a través del juego</p>
-                </div>
-                
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3>Conexión Social</h3>
-                    <p>Fomenta la interacción social en entornos virtuales y presenciales</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Demo Section -->
-    <section class="service-section">
-        <div class="container">
-            <div class="section-title">
-                <h2>Demostración Interactiva</h2>
-                <p>Prueba una versión simplificada de nuestra tecnología</p>
-            </div>
-            
-            <div class="demo-container">
-                <h3>Experiencia de Juego</h3>
-                <p>Mueve tu cuerpo para interactuar con los elementos en pantalla</p>
-                
-                <div class="demo-visualization">
-                    <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Demo juego interactivo" style="max-height: 250px;">
-                    <p style="font-style: italic; color: var(--orange); margin-top: 1rem;">[Área de demostración interactiva - Mueve tu cuerpo para controlar el juego]</p>
-                </div>
-                
-                <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
-                    <a href="#" class="btn">
-                        <i class="fas fa-gamepad"></i> Probar Demo Completa
-                    </a>
-                    <a href="#" class="btn btn-outline">
-                        <i class="fas fa-video"></i> Ver Video Explicativo
-                    </a>
                 </div>
             </div>
         </div>
@@ -647,11 +644,11 @@
     <!-- CTA Section -->
     <section class="cta-section">
         <div class="container">
-            <h2>¿Listo para revolucionar tu experiencia de juego?</h2>
-            <p>Lleva la interacción humano-computadora al siguiente nivel con nuestras soluciones</p>
+            <h2>¿Listo para transformar tus análisis territoriales?</h2>
+            <p>Nuestras soluciones de teledetección con IA pueden proporcionarte insights valiosos para la toma de decisiones</p>
             <div style="margin-top: 2rem;">
                 <a href="/contacto" class="btn">
-                    <i class="fas fa-envelope"></i> Contactar a Nuestro Equipo
+                    <i class="fas fa-envelope"></i> Solicitar Consultoría
                 </a>
                 <a href="https://rollillo.github.io/Page/#contact" class="btn btn-outline">
                     <i class="fas fa-arrow-left"></i> Volver al Inicio
@@ -665,11 +662,11 @@
         <div class="container">
             <div class="footer-logo">KI-LABOR</div>
             <div class="footer-links">
-                <a href="https://rollillo.github.io/Page/">Inicio</a>
-                <a href="https://rollillo.github.io/Page/#services">Servicios</a>
-                <a href="https://rollillo.github.io/Page/#about">Nosotros</a>
-                <a href="https://rollillo.github.io/Page/#portfolio">Portafolio</a>
-                <a href="https://rollillo.github.io/Page/#contact">Contacto</a>
+                <a href="/">Inicio</a>
+                <a href="/servicios">Servicios</a>
+                <a href="/nosotros">Nosotros</a>
+                <a href="/portafolio">Portafolio</a>
+                <a href="/contacto">Contacto</a>
             </div>
             <div class="copyright">
                 &copy; 2023 KI-LABOR. Todos los derechos reservados.

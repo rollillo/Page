@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agentes Inteligentes | KI-LABOR</title>
+    <title>Portal de Noticias con IA | KI-LABOR</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        /* Estilos base consistentes con la página principal */
         :root {
             --navy-blue: #001a33;
             --dark-navy: #000d1a;
@@ -89,7 +88,7 @@
         
         /* Hero Section */
         .service-hero {
-            background: linear-gradient(rgba(0, 10, 26, 0.85), rgba(0, 10, 26, 0.9)), url('https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+            background: linear-gradient(rgba(0, 10, 26, 0.85), rgba(0, 10, 26, 0.9)), url('https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
             height: 60vh;
             display: flex;
             align-items: center;
@@ -164,124 +163,127 @@
             opacity: 0.8;
         }
         
-        /* Architecture Section */
-        .architecture-container {
+        /* Features */
+        .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
             margin-top: 3rem;
         }
         
-        .architecture-card {
-            background: rgba(10, 20, 40, 0.9);
+        .feature-card {
+            background: rgba(72, 118, 218, 0.3);
             border-radius: 15px;
             padding: 2rem;
             border: 1px solid rgba(255, 255, 255, 0.05);
             transition: all 0.3s ease;
-            text-align: center;
         }
         
-        .architecture-card:hover {
+        .feature-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-            border-color: rgba(25, 0, 255, 0.3);
+            border-color: rgba(72, 118, 218, 0.3);
         }
         
-        .architecture-icon {
-            font-size: 3rem;
+        .feature-icon {
+            font-size: 2.5rem;
             color: var(--orange);
             margin-bottom: 1.5rem;
         }
         
-        /* Simulation Features */
-        .features-grid {
+        /* Workflow */
+        .workflow-steps {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 3rem;
+        }
+        
+        .step {
+            background: rgba(0, 51, 102, 0.4);
+            border-radius: 10px;
+            padding: 1.5rem 2rem;
+            margin-bottom: 1.5rem;
+            width: 80%;
+            border-left: 4px solid var(--orange);
+            transition: all 0.3s ease;
+        }
+        
+        .step:hover {
+            transform: translateX(10px);
+            background: rgba(0, 51, 102, 0.6);
+        }
+        
+        .step-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .step-number {
+            background: var(--orange);
+            color: var(--white);
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 1rem;
+            font-weight: bold;
+        }
+        
+        /* Agents Section */
+        .agents-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
             margin-top: 3rem;
         }
         
-        .feature-card {
-            background: rgba(0, 26, 51, 0.4);
+        .agent-card {
+            background: rgba(0, 26, 51, 0.5);
             border-radius: 10px;
             padding: 1.5rem;
-            border-left: 4px solid var(--orange);
+            transition: all 0.3s ease;
         }
         
-        .feature-card h3 {
+        .agent-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .agent-icon {
+            font-size: 2rem;
             color: var(--orange);
             margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
         }
         
-        .feature-card h3 i {
-            margin-right: 10px;
-        }
-        
-        /* Use Cases */
-        .use-cases {
+        /* Benefits */
+        .benefits-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
             margin-top: 3rem;
         }
         
-        .use-case {
-            background: rgba(0, 51, 102, 0.2);
+        .benefit-card {
+            background: rgba(0, 51, 102, 0.3);
             border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            padding: 1.5rem;
+            text-align: center;
             transition: all 0.3s ease;
         }
         
-        .use-case:hover {
+        .benefit-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            background: rgba(0, 51, 102, 0.4);
         }
         
-        .use-case img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-        
-        .use-case-content {
-            padding: 1.5rem;
-        }
-        
-        .use-case h3 {
-            margin-bottom: 0.5rem;
+        .benefit-icon {
+            font-size: 2rem;
             color: var(--orange);
-        }
-        
-        /* Demo Section */
-        .demo-container {
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
-            padding: 3rem;
-            margin-top: 3rem;
-            text-align: center;
-            border: 1px solid rgba(68, 0, 255, 0.2);
-        }
-        
-        .demo-visualization {
-            background: rgba(0, 0, 0, 0.3);
-            padding: 2rem;
-            border-radius: 10px;
-            margin: 2rem 0;
-            min-height: 300px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-        }
-        
-        .demo-visualization img {
-            max-width: 100%;
-            border-radius: 8px;
             margin-bottom: 1rem;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
         }
         
         /* CTA Section */
@@ -305,9 +307,9 @@
         }
         
         .btn:hover {
-            background: #2e37b8;
+            background: #1600e0;
             transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(47, 0, 255, 0.4);
+            box-shadow: 0 15px 30px rgba(4, 0, 255, 0.4);
         }
         
         .btn-outline {
@@ -378,6 +380,10 @@
             .section-title h2 {
                 font-size: 2rem;
             }
+            
+            .step {
+                width: 100%;
+            }
         }
     </style>
 </head>
@@ -399,47 +405,8 @@
     <!-- Hero Section -->
     <section class="service-hero">
         <div class="service-hero-content">
-            <h1>Agentes Inteligentes</h1>
-            <p>Simulador de arquitecturas Human-AI para analizar y optimizar la interacción entre humanos y sistemas inteligentes</p>
-        </div>
-    </section>
-    
-    <!-- Architecture Section -->
-    <section class="service-section">
-        <div class="container">
-            <div class="section-title">
-                <h2>Arquitecturas Human-AI</h2>
-                <p>Modelamos y simulamos diferentes enfoques de colaboración entre humanos y agentes artificiales</p>
-            </div>
-            
-            <div class="architecture-container">
-                <div class="architecture-card">
-                    <div class="architecture-icon">
-                        <i class="fas fa-user-shield"></i>
-                    </div>
-                    <h3>Supervisión Humana</h3>
-                    <p>Arquitectura donde agentes AI realizan tareas bajo supervisión y validación humana constante</p>
-                    <img src="programacion.jpeg" alt="Supervisión humana" style="width:100%; border-radius:8px; margin-top:1.5rem;">
-                </div>
-                
-                <div class="architecture-card">
-                    <div class="architecture-icon">
-                        <i class="fas fa-robot"></i>
-                    </div>
-                    <h3>Autonomía Controlada</h3>
-                    <p>Agentes toman decisiones autónomas en dominios específicos con intervención humana ocasional</p>
-                    <img src="Agentesimg.jpg" alt="Autonomía controlada" style="width:100%; border-radius:8px; margin-top:1.5rem;">
-                </div>
-                
-                <div class="architecture-card">
-                    <div class="architecture-icon">
-                        <i class="fas fa-people-arrows"></i>
-                    </div>
-                    <h3>Colaboración Simétrica</h3>
-                    <p>Interacción fluida donde humanos y AI complementan mutuamente sus capacidades</p>
-                    <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Colaboración simétrica" style="width:100%; border-radius:8px; margin-top:1.5rem;">
-                </div>
-            </div>
+            <h1>Portal de Noticias con IA</h1>
+            <p>Plataforma inteligente que monitorea, analiza y responde a incidentes de seguridad y tránsito en tiempo real</p>
         </div>
     </section>
     
@@ -447,104 +414,197 @@
     <section class="service-section">
         <div class="container">
             <div class="section-title">
-                <h2>Capacidades del Simulador</h2>
-                <p>Herramientas avanzadas para analizar la interacción humano-AI</p>
+                <h2>Características Principales</h2>
+                <p>Nuestra plataforma combina IA avanzada con análisis geoespacial para seguridad pública</p>
             </div>
             
             <div class="features-grid">
                 <div class="feature-card">
-                    <h3><i class="fas fa-project-diagram"></i> Modelado de Flujos</h3>
-                    <p>Visualiza y diseña flujos de trabajo entre humanos y agentes AI con herramientas de arrastrar y soltar</p>
+                    <div class="feature-icon">
+                        <i class="fas fa-newspaper"></i>
+                    </div>
+                    <h3>Generación Automática de Resúmenes</h3>
+                    <p>Extracción de información clave y generación de resúmenes concisos de incidentes reportados en múltiples fuentes</p>
                 </div>
                 
                 <div class="feature-card">
-                    <h3><i class="fas fa-chart-line"></i> Análisis de Rendimiento</h3>
-                    <p>Métricas cuantitativas de eficiencia, precisión y tiempos de respuesta para cada arquitectura</p>
+                    <div class="feature-icon">
+                        <i class="fas fa-tags"></i>
+                    </div>
+                    <h3>Categorización Inteligente</h3>
+                    <p>Clasificación automática de incidentes (accidentes viales, robos, homicidios) con etiquetas detalladas</p>
                 </div>
                 
                 <div class="feature-card">
-                    <h3><i class="fas fa-brain"></i> Simulación Cognitiva</h3>
-                    <p>Modela diferentes niveles de capacidad cognitiva para los agentes artificiales</p>
+                    <div class="feature-icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <h3>Geolocalización Precisa</h3>
+                    <p>Determinación de coordenadas exactas para contextualizar eventos en la infraestructura vial</p>
                 </div>
                 
                 <div class="feature-card">
-                    <h3><i class="fas fa-user-cog"></i> Adaptación Conductual</h3>
-                    <p>Los agentes aprenden y se adaptan a los patrones de interacción humana</p>
+                    <div class="feature-icon">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <h3>Alertas Personalizadas</h3>
+                    <p>Notificaciones en tiempo real basadas en ubicación y preferencias del usuario</p>
                 </div>
                 
                 <div class="feature-card">
-                    <h3><i class="fas fa-shield-alt"></i> Evaluación de Riesgos</h3>
-                    <p>Identifica puntos críticos y posibles fallos en los flujos de colaboración</p>
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Análisis Predictivo</h3>
+                    <p>Identificación de patrones y predicción de riesgos potenciales en áreas específicas</p>
                 </div>
                 
                 <div class="feature-card">
-                    <h3><i class="fas fa-database"></i> Banco de Escenarios</h3>
-                    <p>Biblioteca de casos de uso preconfigurados para diferentes industrias</p>
+                    <div class="feature-icon">
+                        <i class="fas fa-route"></i>
+                    </div>
+                    <h3>Recomendaciones de Rutas</h3>
+                    <p>Sugerencias de rutas alternativas seguras basadas en análisis de incidentes recientes</p>
                 </div>
             </div>
         </div>
     </section>
     
-    <!-- Use Cases Section -->
+    <!-- Workflow Section -->
     <section class="service-section">
         <div class="container">
             <div class="section-title">
-                <h2>Casos de Uso</h2>
-                <p>Aplicaciones prácticas de nuestra tecnología de agentes inteligentes</p>
+                <h2>Flujo de Trabajo</h2>
+                <p>Cómo procesamos y analizamos la información para seguridad pública</p>
             </div>
             
-            <div class="use-cases">
-                <div class="use-case">
-                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Centros de contacto">
-                    <div class="use-case-content">
-                        <h3>Centros de Contacto</h3>
-                        <p>Optimiza la distribución de llamadas entre agentes humanos y virtuales basado en complejidad</p>
+            <div class="workflow-steps">
+                <div class="step">
+                    <div class="step-header">
+                        <div class="step-number">1</div>
+                        <h3>Monitoreo y Recolección de Datos</h3>
                     </div>
+                    <p>Agentes especializados extraen información en tiempo real de noticias locales, redes sociales, reportes oficiales y otras fuentes relevantes</p>
                 </div>
                 
-                <div class="use-case">
-                    <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" alt="Diagnóstico médico">
-                    <div class="use-case-content">
-                        <h3>Diagnóstico Médico</h3>
-                        <p>Asistencia a médicos con sistemas de recomendación y análisis de imágenes médicas</p>
+                <div class="step">
+                    <div class="step-header">
+                        <div class="step-number">2</div>
+                        <h3>Clasificación y Priorización</h3>
                     </div>
+                    <p>Los incidentes se categorizan (accidentes viales, robos, homicidios, etc.) y se priorizan según nivel de urgencia e impacto en la comunidad</p>
                 </div>
                 
-                <div class="use-case">
-                    <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Operaciones industriales">
-                    <div class="use-case-content">
-                        <h3>Operaciones Industriales</h3>
-                        <p>Coordinación entre operarios humanos y sistemas autónomos en entornos complejos</p>
+                <div class="step">
+                    <div class="step-header">
+                        <div class="step-number">3</div>
+                        <h3>Geolocalización y Contextualización</h3>
                     </div>
+                    <p>Determinación de coordenadas exactas y relación con infraestructura vial cercana, puntos de interés y datos históricos</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-header">
+                        <div class="step-number">4</div>
+                        <h3>Análisis y Generación de Insights</h3>
+                    </div>
+                    <p>Producción de predicciones de riesgo, rutas alternativas, horarios seguros y patrones de criminalidad</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-header">
+                        <div class="step-number">5</div>
+                        <h3>Distribución de Información</h3>
+                    </div>
+                    <p>Generación de informes adaptados para autoridades, ciudadanos y medios de comunicación</p>
                 </div>
             </div>
         </div>
     </section>
     
-    <!-- Demo Section -->
+    <!-- Agents Section -->
     <section class="service-section">
         <div class="container">
             <div class="section-title">
-                <h2>Demostración Interactiva</h2>
-                <p>Explora nuestro simulador de arquitecturas Human-AI</p>
+                <h2>Agentes Especializados</h2>
+                <p>Sistema modular donde cada agente realiza tareas específicas con máxima precisión</p>
             </div>
             
-            <div class="demo-container">
-                <h3>Simulador de Flujos de Trabajo</h3>
-                <p>Configura diferentes modelos de interacción y observa los resultados en tiempo real</p>
-                
-                <div class="demo-visualization">
-                    <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Interfaz del simulador" style="max-height: 300px;">
-                    <p style="font-style: italic; color: var(--orange);">[Área interactiva del simulador de arquitecturas]</p>
+            <div class="agents-container">
+                <div class="agent-card">
+                    <div class="agent-icon">
+                        <i class="fas fa-cloud-download-alt"></i>
+                    </div>
+                    <h3>Agente de Adquisición</h3>
+                    <p>Recolecta datos de múltiples fuentes en tiempo real mediante técnicas avanzadas de web scraping</p>
                 </div>
                 
-                <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
-                    <a href="#" class="btn">
-                        <i class="fas fa-play"></i> Iniciar Simulación
-                    </a>
-                    <a href="#" class="btn btn-outline">
-                        <i class="fas fa-book"></i> Ver Tutorial
-                    </a>
+                <div class="agent-card">
+                    <div class="agent-icon">
+                        <i class="fas fa-filter"></i>
+                    </div>
+                    <h3>Agente de Clasificación</h3>
+                    <p>Analiza y categoriza incidentes usando modelos de NLP y aprendizaje profundo</p>
+                </div>
+                
+                <div class="agent-card">
+                    <div class="agent-icon">
+                        <i class="fas fa-map-pin"></i>
+                    </div>
+                    <h3>Agente de Geolocalización</h3>
+                    <p>Extrae y valida coordenadas geográficas, relacionando eventos con mapas digitales</p>
+                </div>
+                
+                <div class="agent-card">
+                    <div class="agent-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Agente de Análisis</h3>
+                    <p>Genera predicciones y recomendaciones basadas en patrones históricos y en tiempo real</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Benefits Section -->
+    <section class="service-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Beneficios Clave</h2>
+                <p>Ventajas de nuestra plataforma inteligente para seguridad pública</p>
+            </div>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Respuesta Más Rápida</h3>
+                    <p>Reducción significativa en el tiempo entre la ocurrencia de incidentes y la respuesta de autoridades</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Prevención de Incidentes</h3>
+                    <p>Identificación proactiva de zonas de riesgo y patrones criminales</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Información Ciudadana</h3>
+                    <p>Empoderamiento de la comunidad con datos accionables para su seguridad</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <h3>Optimización de Recursos</h3>
+                    <p>Asignación más eficiente de patrullas y personal de seguridad basada en datos</p>
                 </div>
             </div>
         </div>
@@ -553,14 +613,14 @@
     <!-- CTA Section -->
     <section class="cta-section">
         <div class="container">
-            <h2>¿Listo para optimizar la colaboración en tu organización?</h2>
-            <p>Nuestros agentes inteligentes pueden transformar tus procesos operativos</p>
+            <h2>¿Listo para revolucionar la gestión de seguridad en tu región?</h2>
+            <p>Nuestra plataforma de noticias con IA puede proporcionar la inteligencia que necesitas para tomar decisiones informadas</p>
             <div style="margin-top: 2rem;">
                 <a href="/contacto" class="btn">
-                    <i class="fas fa-phone-alt"></i> Solicitar Demo Personalizada
+                    <i class="fas fa-envelope"></i> Solicitar Demostración
                 </a>
                 <a href="https://rollillo.github.io/Page/#contact" class="btn btn-outline">
-                    <i class="fas fa-home"></i> Volver al Inicio
+                    <i class="fas fa-arrow-left"></i> Volver al Inicio
                 </a>
             </div>
         </div>
