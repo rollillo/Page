@@ -212,7 +212,7 @@
             height: 100%;
             background: linear-gradient(to right, transparent 0%, rgba(255, 255, 255, 0.2) 50%, transparent 100%);
             transform: translateX(-100%);
-            transition: transform 0.6s ease;
+            transition: transform 0.4s ease;
         }
         
         .btn:hover::after {
@@ -272,7 +272,7 @@
         
         /* Services Section */
         .section {
-            padding: 6rem 2rem;
+            padding: 5rem 2rem;
             position: relative;
             overflow: hidden;
         }
@@ -348,12 +348,35 @@
         }
         
         .service-icon {
-            background: linear-gradient(135deg, var(--navy-blue), var(--light-blue));
             color: var(--white);
             font-size: 2.8rem;
             padding: 2rem;
             text-align: center;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.4s ease;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        /* Estilos específicos para cada servicio */
+        .service-1 .service-icon {
+            background-image: url('asistente virtual.webp');
+        }
+        .service-2 .service-icon {
+            background-image: url('Mini-agentes.png');
+        }
+        .service-3 .service-icon {
+            background-image: url('graficas.png');
+        }
+        .service-4 .service-icon {
+            background-image: url('robo-datos.jpg');
+        }
+        .service-5 .service-icon {
+            background-image: url('artificialvision.png');
+        }
+        .service-6 .service-icon {
+            background-image: url('FRUTI_MENU_02.jpg');
         }
         
         .service-content {
@@ -504,7 +527,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: all 0.5s ease;
+            transition: all 0.4s ease;
         }
         
         .portfolio-overlay {
@@ -679,6 +702,39 @@
         .contact-form textarea {
             min-height: 180px;
             resize: vertical;
+        }
+        
+        /* Colaboradores Section Styles */
+        .colaboradores-grid {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            padding: 2rem 0;
+            margin-top: 0rem;
+        }
+        
+        .colaborador-item {
+            text-align: center;
+            color: var(--white);
+        }
+        
+        .colaborador-img {
+            width: 180px;
+            height: 80px;
+            object-fit: contain;
+            margin-bottom: 0rem;
+        }
+        
+        .colaborador-item h3 {
+            font-size: 1.2rem;
+            margin: 0;
+        }
+        
+        @media (max-width: 768px) {
+            .colaboradores-grid {
+                flex-direction: column;
+                align-items: center;
+            }
         }
         
         .contact-form button[type="submit"] {
@@ -905,89 +961,130 @@
         <div class="tech-element"><i class="fas fa-code"></i></div>
         
         <div class="hero-content">
-            <h1>Innovación Tecnológica a Tu Alcance</h1>
-            <p>Expertos en desarrollo de software especializado, entregamos soluciones inteligentes con calidad y puntualidad.</p>
+            <h1>Soluciones en Inteligencia Artificial</h1>
+            <p>Usamos IA, automatización y NLP para transformar documentos en datos útiles y brindar soluciones a medida para cada sector.</p>
             <a href="#contact" class="btn">Contáctanos Ahora</a>
         </div>
     </section>
     
     <!-- Services Section -->
-    <section class="section" id="services">
-        <div class="section-title">
-            <h2>Nuestros Servicios</h2>
-            <p>Soluciones tecnológicas de vanguardia diseñadas para impulsar tu negocio al siguiente nivel.</p>
-        </div>
         
         <div class="services-grid">
             <!-- Service 1 -->
-            <div class="service-card">
+            <div class="service-card service-1">
                 <div class="service-icon">
                     <i class="fas fa-database"></i>
                 </div>
                 <div class="service-content">
-                    <h3>Bases de Datos Empresariales</h3>
-                    <p>Diseñamos sistemas de gestión de datos robustos, seguros y escalables para optimizar tus operaciones y análisis empresarial.</p>
+                    <h3>CAPACITACIÓN CON IA</h3>
+                    <p>🤖 IA Conversacional.
+Asistentes virtuales que guían el proceso de aprendizaje y responden preguntas al instante.</p>
+                    <p>🧠 Sistemas de Recomendación Inteligente.
+Sugerencias de contenido personalizado basado en el desempeño y preferencias del usuario.</p>
+                    <p>📄 Procesamiento de Lenguaje Natural (NLP).
+Comprensión automática de respuestas escritas y generación de feedback en lenguaje natural.</p>
+                    <p>🔁 Automatización de Flujos de Aprendizaje.
+Programación de rutas formativas, recordatorios y certificaciones sin intervención humana.</p>
                     <a href="#BaseD" class="service-link">Explorar servicio <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
             
             <!-- Service 2 -->
-            <div class="service-card">
+            <div class="service-card service-2">
                 <div class="service-icon">
                     <i class="fas fa-code"></i>
                 </div>
                 <div class="service-content">
-                    <h3>Desarrollo Web</h3>
-                    <p>Creación de sitios web corporativos, e-commerce y aplicaciones web personalizadas con las últimas tecnologías y diseño responsive.</p>
-                    <a href="#" class="service-link">Explorar servicio <i class="fas fa-arrow-right"></i></a>
+                    <h3>AGENTES PERSONALIZADOS</h3>
+                    <p>🌐 Procesamiento de Lenguaje Natural (NLP).
+Para interpretar comandos humanos y comunicarse eficazmente.</p>
+                    <p>🧠 Machine Learning y Deep Learning.
+Para mejorar la toma de decisiones y adaptarse a nuevos patrones.</p>
+                    <p>🧩 Sistemas Multiagente (MAS).
+Arquitecturas para simular o implementar colaboración entre múltiples agentes autónomos.</p>
+                    <p>🧬 Ontologías y Razonamiento Lógico.
+Para representar conocimiento estructurado y ejecutar inferencias complejas.</p>
+                    <a href="#Agentes" class="service-link">Explorar servicio <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
             
             <!-- Service 3 -->
-            <div class="service-card">
+            <div class="service-card service-3">
                 <div class="service-icon">
                     <i class="fas fa-robot"></i>
                 </div>
                 <div class="service-content">
-                    <h3>Asistentes de IA</h3>
-                    <p>Desarrollo de chatbots inteligentes y sistemas de atención automatizada que mejoran la experiencia del cliente y reducen costos.</p>
-                    <a href="#" class="service-link">Explorar servicio <i class="fas fa-arrow-right"></i></a>
+                    <h3>GRÁFICOS CON IA</h3>
+                    <p>🧠 Modelos Predictivos y Machine Learning.
+Los gráficos pueden incluir predicciones basadas en modelos entrenados sobre datos históricos.</p>
+                    <p>🧾 Procesamiento de Lenguaje Natural (NLP).
+Conversión de instrucciones en lenguaje natural en consultas y visualizaciones automáticas.</p>
+                    <p>🧮 Generación de SQL con IA.
+La IA interpreta peticiones y construye las consultas necesarias para alimentar gráficos desde bases de datos.</p>
+                    <p>📊 Integración con Librerías Gráficas.
+Compatibles con herramientas como Plotly, D3.js, Highcharts, Matplotlib, Power BI, Tableau, entre otras.</p>
+                    <a href="#Agentes" class="service-link">Explorar servicio <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
             
             <!-- Service 4 -->
-            <div class="service-card">
+            <div class="service-card service-4">
                 <div class="service-icon">
                     <i class="fas fa-eye"></i>
                 </div>
                 <div class="service-content">
-                    <h3>Visión Artificial</h3>
-                    <p>Soluciones de reconocimiento facial, análisis de imágenes y sistemas de seguridad basados en inteligencia artificial.</p>
-                    <a href="#" class="service-link">Explorar servicio <i class="fas fa-arrow-right"></i></a>
+                    <h3>RECUPERACIÓN DE INFORMACIÓN</h3>
+                    <p>🧠 Modelos de Lenguaje Avanzados (LLMs).
+Capaces de entender preguntas y generar respuestas claras.</p>
+                    <p>🔁 RAG (Retrieval-Augmented Generation).
+Recupera información externa en tiempo real y la utiliza para generar respuestas actualizadas.</p>
+                    <p>🧩 KAG (Knowledge-Augmented Generation).
+Integra información de ontologías, grafos de conocimiento, catálogos y bases estructuradas para generar respuestas basadas en hechos comprobables.</p>
+                    <p>📦 Vectorización y Búsqueda Semántica.
+Permite encontrar contenido relevante aunque esté formulado de manera diferente.</p>
+                    <a href="#Agentes" class="service-link">Explorar servicio <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
             
             <!-- Service 5 -->
-            <div class="service-card">
+            <div class="service-card service-5">
                 <div class="service-icon">
-                    <i class="fas fa-gamepad"></i>
+                    <i class="fa-brands fa-python"></i>
                 </div>
                 <div class="service-content">
-                    <h3>Desarrollo de Videojuegos</h3>
-                    <p>Creación de prototipos rápidos y juegos serios para entrenamiento, educación y marketing corporativo.</p>
-                    <a href="#" class="service-link">Explorar servicio <i class="fas fa-arrow-right"></i></a>
+                    <h3>VISIÓN ARTIFICIAL</h3>
+                    <p>📸 Procesamiento de Imágenes (Image Processing).
+Filtrado, segmentación, detección de bordes, color, textura y más.</p>
+                    <p>🧠 Deep Learning y Redes Convolucionales (CNN).
+Para reconocimiento facial, clasificación de objetos, segmentación semántica, etc.</p>
+                    <p>📍 Visión por Computadora + IA.
+Combina detección visual con toma de decisiones automatizada.</p>
+                    <p>🔁 Edge Computing + Visión Artificial.
+Procesamiento local en dispositivos (drones, cámaras, robots), sin depender de la nube.</p>
+                    <p>🧬 Modelos Preentrenados + Transfer Learning.
+Adaptación rápida a nuevos entornos o sectores específicos.</p>
+                    <a href="#Agentes" class="service-link">Explorar servicio <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
             
             <!-- Service 6 -->
-            <div class="service-card">
+            <div class="service-card service-6">
                 <div class="service-icon">
-                    <i class="fab fa-python"></i>
+                    <i class="fa-solid fa-gamepad"></i>
                 </div>
                 <div class="service-content">
-                    <h3>Soluciones en Python</h3>
-                    <p>Automatización de procesos, análisis de datos avanzado y scripts personalizados para optimizar tus operaciones diarias.</p>
-                    <a href="#" class="service-link">Explorar servicio <i class="fas fa-arrow-right"></i></a>
+                    <h3>VIDEOJUEGOS</h3>
+                    <p>🎮 Motores de Videojuegos Populares.<br>
+                    Unity: Versátil, multiplataforma y accesible.<br>
+                    Unreal Engine: Gráficos de alta calidad, ideal para AAA y cine interactivo.<br>
+                    Godot: Open-source, liviano y con excelente curva de aprendizaje.<br><br>
+                    🖼️ Gráficos y Diseño Visual.<br>
+                    Uso de shaders, ray tracing, pixel art, low poly y estilos híbridos según el tipo de juego.<br><br>
+                    🌐 Multijugador y Cloud Gaming.<br>
+                    Integración con servidores en línea, ranking, matchmaking y juego cruzado.<br><br>
+                    📦 Exportación Multiplataforma.<br>
+                    Consolas (PlayStation, Xbox, Nintendo), PC, WebGL, móviles (iOS, Android), VR/AR.</p>
+                    <a href="#Agentes" class="service-link">Explorar servicio <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
@@ -1093,6 +1190,32 @@
         </div>
     </section>
     
+    <!-- Colaboradores Section -->
+    <section class="section colaboradores" id="colaboradores" style="height: 80vh;">
+        <div class="section-title">
+            <h2>Colaboradores</h2>
+            <p>Nuestros principales aliados tecnológicos</p>
+        </div>
+        
+        <div class="colaboradores-grid">
+            <div class="colaborador-item">
+                <img src="orange-purple.png" alt="Desarrollo" class="colaborador-img">
+            </div>
+            <div class="colaborador-item">
+                <img src="thincrs_Z.svg" alt="Análisis" class="colaborador-img">
+            </div>
+            <div class="colaborador-item">
+                <img src="CICATA_logo_blanco.png" alt="Nube" class="colaborador-img">
+            </div>
+            <div class="colaborador-item">
+                <img src="Robik.png" alt="IA" class="colaborador-img">
+            </div>
+            <div class="colaborador-item">
+                <img src="Robik_Z.svg" alt="Redes" class="colaborador-img">
+            </div>
+        </div>
+    </section>
+    
     <!-- Contact Section -->
     <section class="section contact" id="contact">
         <div class="section-title">
@@ -1148,27 +1271,23 @@
             </div>
             
             <div class="contact-form">
-                <form id="contactForm">
+                <form action="https://formspree.io/f/myzjrwlq" method="POST">
                     <div class="form-group">
                         <label for="name">Nombre Completo</label>
-                        <input type="text" id="name" name="name" required placeholder="Ingresa tu nombre completo">
+                        <input type="text" id="name" name="name" required placeholder="Tu nombre...">
                     </div>
                     
                     <div class="form-group">
                         <label for="email">Correo Electrónico</label>
-                        <input type="email" id="email" name="email" required placeholder="tucorreo@ejemplo.com">
+                        <input type="email" id="email" name="email" required placeholder="tu@email.com">
                     </div>
                     
                     <div class="form-group">
-                        <label for="phone">Teléfono (Opcional)</label>
-                        <input type="tel" id="phone" name="phone" placeholder="+52 419 116 6853">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="service">Servicio de Interés</label>
-                        <select style="background-color: #ffffff1a;" id="service" name="service" required>
-                            <option value="" disabled selected>Selecciona un servicio</option>
+                        <label for="subject">Tipo de Proyecto</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Selecciona un tipo...</option>
                             <option value="web">Desarrollo Web</option>
+                            <option value="mobile">Aplicaciones Móviles</option>
                             <option value="database">Bases de Datos</option>
                             <option value="ai">Inteligencia Artificial</option>
                             <option value="vision">Visión Artificial</option>
@@ -1321,7 +1440,7 @@
             elements.forEach((element, index) => {
                 element.style.opacity = '0';
                 element.style.transform = 'translateY(30px)';
-                element.style.transition = `all 0.5s ease ${index * 0.1}s`;
+                element.style.transition = `all 0.4s ease ${index * 0.1}s`;
             });
             
             // Trigger animation after a short delay
