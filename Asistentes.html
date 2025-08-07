@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asistentes de IA | KI-LABOR</title>
+    <title>Capacitación Automatizada con IA | KI-LABOR</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
@@ -89,7 +89,7 @@
         
         /* Hero Section */
         .service-hero {
-            background: linear-gradient(rgba(0, 10, 26, 0.85), rgba(0, 10, 26, 0.9)), url('https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+            background: linear-gradient(rgba(0, 10, 26, 0.85), rgba(0, 10, 26, 0.9)), url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
             height: 60vh;
             display: flex;
             align-items: center;
@@ -150,15 +150,15 @@
             opacity: 0.8;
         }
         
-        /* How It Works */
-        .steps-container {
+        /* Benefits Section */
+        .benefits-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
             margin-top: 3rem;
         }
         
-        .step-card {
+        .benefit-card {
             background: rgba(10, 20, 40, 0.9);
             border-radius: 15px;
             padding: 2rem;
@@ -166,33 +166,26 @@
             transition: all 0.3s ease;
         }
         
-        .step-card:hover {
+        .benefit-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
         }
         
-        .step-number {
-            display: inline-block;
-            background: var(--orange);
-            color: var(--white);
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            text-align: center;
-            line-height: 40px;
-            font-weight: bold;
+        .benefit-icon {
+            font-size: 2rem;
             margin-bottom: 1rem;
+            color: var(--orange);
         }
         
-        /* Tools Section */
-        .tools-grid {
+        /* Components Section */
+        .components-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
             margin-top: 3rem;
         }
         
-        .tool-card {
+        .component-card {
             background: rgba(255, 255, 255, 0.1);
             border-radius: 10px;
             padding: 1.5rem;
@@ -201,12 +194,12 @@
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
         
-        .tool-card:hover {
+        .component-card:hover {
             background: rgba(255, 255, 255, 0.1);
             transform: translateY(-5px);
         }
         
-        .tool-icon {
+        .component-icon {
             font-size: 2.5rem;
             margin-bottom: 1rem;
             color: var(--orange);
@@ -242,14 +235,56 @@
             color: var(--orange);
         }
         
-        /* Demo Section */
-        .demo-container {
+        /* Results Section */
+        .results-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+            text-align: center;
+        }
+        
+        .result-item {
+            background: rgba(0, 26, 51, 0.5);
+            border-radius: 10px;
+            padding: 2rem 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .result-value {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: var(--orange);
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Integration Section */
+        .integration-container {
             background: rgba(0, 26, 51, 0.5);
             border-radius: 15px;
             padding: 3rem;
             margin-top: 3rem;
-            text-align: center;
             border: 1px solid rgba(4, 0, 255, 0.2);
+        }
+        
+        .integration-list {
+            columns: 2;
+            column-gap: 2rem;
+            margin-top: 1.5rem;
+        }
+        
+        .integration-list li {
+            margin-bottom: 1rem;
+            list-style-type: none;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        
+        .integration-list li::before {
+            content: "✓";
+            color: var(--orange);
+            position: absolute;
+            left: 0;
         }
         
         /* CTA Section */
@@ -346,6 +381,10 @@
             .section-title h2 {
                 font-size: 2rem;
             }
+            
+            .integration-list {
+                columns: 1;
+            }
         }
     </style>
 </head>
@@ -367,87 +406,92 @@
     <!-- Hero Section -->
     <section class="service-hero">
         <div class="service-hero-content">
-            <h1>Asistente Virtual con IA</h1>
-            <p>Transforma la forma en que interactúas con tus datos mediante asistentes que comprenden lenguaje natural</p>
+            <h1>Capacitación Automatizada con IA</h1>
+            <p>Transforma la formación laboral con soluciones que se adaptan al perfil de cada usuario y optimizan el aprendizaje en tiempo real</p>
         </div>
     </section>
     
-    <!-- How It Works Section -->
+    <!-- Introduction Section -->
     <section class="service-section">
         <div class="container">
             <div class="section-title">
-                <h2>¿Cómo Funciona?</h2>
-                <p>Nuestros asistentes de IA interpretan tus preguntas en lenguaje natural y las convierten en acciones concretas</p>
+                <h2>Introducción a la Capacitación Automatizada con IA</h2>
+                <p>La capacitación automatizada con inteligencia artificial redefine la formación laboral al adaptar contenidos, evaluar el progreso y optimizar el aprendizaje según el perfil de cada usuario, todo en tiempo real.</p>
             </div>
             
-            <div class="steps-container">
-                <div class="step-card">
-                    <div class="step-number">1</div>
-                    <h3>Interpretación Natural</h3>
-                    <p>El usuario formula preguntas en lenguaje cotidiano como "¿Cuáles fueron las ventas del último trimestre por región?"</p>
-                    <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1064&q=80" alt="Lenguaje natural" style="width:100%; border-radius:8px; margin-top:1rem;">
-                </div>
-                
-                <div class="step-card">
-                    <div class="step-number">2</div>
-                    <h3>Generación de Consultas</h3>
-                    <p>La IA analiza la intención y estructura la consulta SQL correspondiente para extraer los datos solicitados</p>
-                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Código SQL" style="width:100%; border-radius:8px; margin-top:1rem;">
-                </div>
-                
-                <div class="step-card">
-                    <div class="step-number">3</div>
-                    <h3>Visualización Automática</h3>
-                    <p>Los resultados se presentan en gráficos interactivos y tablas resumen, listos para el análisis</p>
-                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1115&q=80" alt="Visualización de datos" style="width:100%; border-radius:8px; margin-top:1rem;">
-                </div>
+            <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Capacitación con IA" style="width:100%; border-radius:15px; margin-top:2rem;">
             </div>
         </div>
     </section>
     
-    <!-- Tools Section -->
+    <!-- Benefits Section -->
     <section class="service-section">
         <div class="container">
             <div class="section-title">
-                <h2>Tecnologías que Utilizamos</h2>
-                <p>Combinamos las mejores herramientas de inteligencia artificial y procesamiento de lenguaje natural</p>
+                <h2>Beneficios Clave</h2>
+                <p>Descubre las ventajas competitivas que ofrece nuestra solución de capacitación inteligente</p>
             </div>
             
-            <div class="tools-grid">
-                <div class="tool-card">
-                    <div class="tool-icon"><i class="fab fa-python"></i></div>
-                    <h3>Python</h3>
-                    <p>Lenguaje principal para el desarrollo de nuestros modelos de IA</p>
+            <div class="benefits-container">
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎯</div>
+                    <h3>Personalización del Aprendizaje</h3>
+                    <p>Adaptación dinámica del contenido según el nivel, rol y ritmo de cada colaborador.</p>
                 </div>
                 
-                <div class="tool-card">
-                    <div class="tool-icon"><i class="fas fa-brain"></i></div>
-                    <h3>TensorFlow</h3>
-                    <p>Framework para el entrenamiento de modelos de aprendizaje profundo</p>
+                <div class="benefit-card">
+                    <div class="benefit-icon">⚙️</div>
+                    <h3>Automatización del Seguimiento y Evaluación</h3>
+                    <p>Evaluaciones automáticas con retroalimentación inmediata basada en desempeño.</p>
                 </div>
                 
-                <div class="tool-card">
-                    <div class="tool-icon"><i class="fas fa-language"></i></div>
-                    <h3>NLTK</h3>
-                    <p>Procesamiento de lenguaje natural para entender las consultas</p>
+                <div class="benefit-card">
+                    <div class="benefit-icon">⏱️</div>
+                    <h3>Reducción de Tiempo y Costos</h3>
+                    <p>Ahorro en logística, instructores y materiales mediante módulos digitales autogestionados.</p>
                 </div>
                 
-                <div class="tool-card">
-                    <div class="tool-icon"><i class="fas fa-database"></i></div>
-                    <h3>SQL</h3>
-                    <p>Generación automática de consultas a bases de datos</p>
+                <div class="benefit-card">
+                    <div class="benefit-icon">📈</div>
+                    <h3>Mejora Continua con Datos</h3>
+                    <p>Análisis de métricas en tiempo real para detectar brechas y optimizar programas formativos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Components Section -->
+    <section class="service-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Componentes Tecnológicos</h2>
+                <p>La arquitectura avanzada que hace posible la capacitación automatizada</p>
+            </div>
+            
+            <div class="components-grid">
+                <div class="component-card">
+                    <div class="component-icon">🤖</div>
+                    <h3>IA Conversacional</h3>
+                    <p>Asistentes virtuales que guían el proceso de aprendizaje y responden preguntas al instante.</p>
                 </div>
                 
-                <div class="tool-card">
-                    <div class="tool-icon"><i class="fas fa-chart-bar"></i></div>
-                    <h3>Plotly</h3>
-                    <p>Visualización interactiva de los resultados</p>
+                <div class="component-card">
+                    <div class="component-icon">🧠</div>
+                    <h3>Sistemas de Recomendación Inteligente</h3>
+                    <p>Sugerencias de contenido personalizado basado en el desempeño y preferencias del usuario.</p>
                 </div>
                 
-                <div class="tool-card">
-                    <div class="tool-icon"><i class="fas fa-cloud"></i></div>
-                    <h3>Azure AI</h3>
-                    <p>Infraestructura en la nube para despliegue escalable</p>
+                <div class="component-card">
+                    <div class="component-icon">📄</div>
+                    <h3>Procesamiento de Lenguaje Natural (NLP)</h3>
+                    <p>Comprensión automática de respuestas escritas y generación de feedback en lenguaje natural.</p>
+                </div>
+                
+                <div class="component-card">
+                    <div class="component-icon">🔁</div>
+                    <h3>Automatización de Flujos de Aprendizaje</h3>
+                    <p>Programación de rutas formativas, recordatorios y certificaciones sin intervención humana.</p>
                 </div>
             </div>
         </div>
@@ -457,54 +501,101 @@
     <section class="service-section">
         <div class="container">
             <div class="section-title">
-                <h2>Aplicaciones Prácticas</h2>
-                <p>Descubre cómo nuestros asistentes de IA pueden transformar tu negocio</p>
+                <h2>Casos de Uso</h2>
+                <p>Aplicaciones prácticas en diversos sectores industriales</p>
             </div>
             
             <div class="use-cases">
                 <div class="use-case">
-                    <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Business Intelligence">
+                    <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Sector Salud">
                     <div class="use-case-content">
-                        <h3>Business Intelligence</h3>
-                        <p>Consulta tus métricas empresariales con preguntas simples sin necesidad de conocimientos técnicos</p>
+                        <h3>Sector Salud</h3>
+                        <p>Entrenamiento continuo de personal médico con simulaciones clínicas automatizadas.</p>
                     </div>
                 </div>
                 
                 <div class="use-case">
-                    <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Ventas y Marketing">
+                    <img src="https://images.unsplash.com/photo-1513828583688-c52646db42da?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Industria">
                     <div class="use-case-content">
-                        <h3>Ventas y Marketing</h3>
-                        <p>Analiza tendencias de ventas, comportamiento del cliente y eficacia de campañas</p>
+                        <h3>Industria</h3>
+                        <p>Capacitación técnica en seguridad y operación de maquinaria.</p>
                     </div>
                 </div>
                 
                 <div class="use-case">
-                    <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" alt="Recursos Humanos">
+                    <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Gobierno">
                     <div class="use-case-content">
-                        <h3>Recursos Humanos</h3>
-                        <p>Obtén insights sobre rendimiento, rotación y satisfacción de empleados</p>
+                        <h3>Gobierno</h3>
+                        <p>Formación masiva en normativas, procesos y ética pública.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
     
-    <!-- Demo Section -->
+    <!-- Integration Section -->
     <section class="service-section">
         <div class="container">
             <div class="section-title">
-                <h2>Demostración Interactiva</h2>
-                <p>Prueba cómo funciona nuestro asistente de IA con datos de ejemplo</p>
+                <h2>Integración con Plataformas Existentes</h2>
+                <p>Nuestra solución se adapta a tu ecosistema tecnológico actual</p>
             </div>
             
-            <div class="demo-container">
-                <h3>Pregúntale a nuestro asistente</h3>
-                <p>Ejemplo: "Muestra las ventas por producto del último mes ordenadas de mayor a menor"</p>
-                <div style="background: rgba(0,0,0,0.3); padding: 1rem; border-radius: 8px; margin: 2rem 0; min-height: 200px;">
-                    <!-- Aquí iría el componente interactivo real -->
-                    <p style="color: var(--orange); font-style: italic;">[Área de demostración interactiva]</p>
+            <div class="integration-container">
+                <ul class="integration-list">
+                    <li>Compatible con LMS como Moodle, Canvas y Google Classroom</li>
+                    <li>APIs para integración con sistemas internos de RRHH, ERP o CRM</li>
+                    <li>Soporte para contenido SCORM, vídeos, PDF, simulaciones y más</li>
+                    <li>Autenticación con SSO (Single Sign-On)</li>
+                    <li>Reportes personalizados integrables con Power BI y Tableau</li>
+                    <li>Notificaciones y recordatorios automáticos vía email y móvil</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Results Section -->
+    <section class="service-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Resultados Esperados</h2>
+                <p>Métricas de impacto que puedes esperar al implementar nuestra solución</p>
+            </div>
+            
+            <div class="results-container">
+                <div class="result-item">
+                    <div class="result-value">+70%</div>
+                    <p>de retención de conocimientos</p>
                 </div>
-                <a href="#" class="btn">Probar Demo Completa</a>
+                
+                <div class="result-item">
+                    <div class="result-value">-50%</div>
+                    <p>de tiempo de formación promedio</p>
+                </div>
+                
+                <div class="result-item">
+                    <div class="result-value">+90%</div>
+                    <p>de satisfacción de usuarios</p>
+                </div>
+                
+                <div class="result-item">
+                    <div class="result-value">3 meses</div>
+                    <p>ROI visible en menos de</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Our Solution Section -->
+    <section class="service-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nuestra Solución</h2>
+                <p>En Ki-Labor, ofrecemos una plataforma de capacitación inteligente, adaptable y escalable, lista para transformar la forma en que tu organización aprende, entrena y evoluciona.</p>
+            </div>
+            
+            <div style="text-align: center; margin-top: 3rem;">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Plataforma de capacitación" style="max-width: 800px; width: 100%; border-radius: 15px;">
             </div>
         </div>
     </section>
@@ -512,7 +603,7 @@
     <!-- CTA Section -->
     <section class="cta-section">
         <div class="container">
-            <h2>¿Listo para transformar cómo interactúas con tus datos?</h2>
+            <h2>¿Listo para revolucionar la capacitación en tu organización?</h2>
             <p>Implementamos soluciones personalizadas según las necesidades específicas de tu empresa</p>
             <div style="margin-top: 2rem;">
                 <a href="/contacto" class="btn">Solicitar una Demostración</a>
